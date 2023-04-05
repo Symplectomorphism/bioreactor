@@ -25,7 +25,9 @@ FASTRUN void timer0_callback() {
     /*
      * Change the amplitude here.
      */
-    analogWrite(pwmpin, waveformsTable[i]);  // write the selected waveform on DAC
+    int ampl = (int)(0.75*waveformsTable[i]);
+    analogWrite(pwmpin, ampl);  // write the selected waveform on DAC
+    // Serial.print(ampl);
     
     if (i<256) {
         digitalWrite(ledpin, HIGH);
@@ -36,6 +38,7 @@ FASTRUN void timer0_callback() {
     i++;
     if (i==512)
         i=0;
+
 
     /* 
      * The frequency of oscillation in Hz is given by (delay in microseconds)
@@ -58,6 +61,8 @@ FASTRUN void setup() {
     pinMode(ledpin, OUTPUT);
     
     timer0.begin(timer0_callback, 1.25);  
+
+    Serial.begin(9600);
 }
 
 

@@ -22,6 +22,9 @@ int pwmpin = 37;
 volatile int i = 0;
 
 FASTRUN void timer0_callback() {
+    /*
+     * Change the amplitude here.
+     */
     analogWrite(pwmpin, waveformsTable[i]);  // write the selected waveform on DAC
     
     if (i<256) {

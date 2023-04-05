@@ -1,0 +1,82 @@
+%\usepackage{lgrind}        % convert program listings to a form includable in a LaTeX document
+% \usepackage[export]{adjustbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{caption}
+\captionsetup[figure]{font=small}
+\usepackage{chapterbib}    % allows a bibliography for each chapter (each labguide has it's own)
+\usepackage{enumitem}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+% \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{graphics}      % standard graphics specifications
+\usepackage[]{graphicx}      % alternative graphics specifications
+\graphicspath{ {./figures/} }
+\usepackage{lipsum}
+% \usepackage{longtable}     % helps with long table options
+\usepackage{mathrsfs}
+% \usepackage{multicol}
+\usepackage{multirow}
+\usepackage{nicefrac}
+% \usepackage{bm}            % special 'bold-math' package
+\usepackage{scalerel}
+\usepackage{subcaption}
+\usepackage{tabularx}
+% \usepackage{titlesec}
+\usepackage{url}
+\usepackage{xfrac}
+\usepackage{verbatim}			% for comment environment
+%\usepackage{asymptote}     % For typesetting of mathematical illustrations
+%\usepackage{thumbpdf}
+\usepackage[colorlinks=true]{hyperref}  % this package should be added after all others
+\hypersetup{
+pdftitle={Project Report Template},
+linkbordercolor=orange,
+citebordercolor=blue,
+% pdfborder={0 0 1},
+urlbordercolor=blue
+}
+\usepackage[textsize=footnotesize]{todonotes}
+\usepackage{tikz}
+\usetikzlibrary{graphs,quotes,arrows,patterns,decorations.pathmorphing}
+
+%Next line moves text up a bit without changing text area size  
+\addtolength\topmargin{-.5\topmargin} %increases the top margin by half.
+
+
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\newcommand{\bmat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\ubar}[1]{\text{\b{$#1$}}}
+\newcommand{\norm}[2]{\|{#1}\|_{{}_{#2}}}
+\newcommand{\abs}[1]{\left|{#1}\right|}
+
+\newcommand{\mbf}[1]{\mathbf{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\dd}{\operatorname{d}\!}
+\newcommand{\muc}[2]{\multicolumn{#1}{c}{#2}}
+\newcommand*\Eval[3]{\left.#1\right\rvert_{#2}^{#3}}
+\newcommand{\inner}[1]{\left\langle#1\right\rangle}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\vectornorm}[1]{\left|\left|#1\right|\right|}
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+\newtheorem{defn}{Definition}
+\newtheorem*{thm*}{Theorem}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{rem}{Remark}
+% \newtheorem*{lem2}{Lemma}
+% \newtheorem*{prop2}{Proposition}
+\newtheorem{prop3}{Proposition}
+
+\DeclareMathOperator{\Tr}{tr}

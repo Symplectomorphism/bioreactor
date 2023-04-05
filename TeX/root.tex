@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sample template for MIT Junior Lab Student Written Summaries
+% Available from https://urldefense.proofpoint.com/v2/url?u=http-3A__web.mit.edu_8.13_www_Samplepaper_sample-2Dpaper.tex&d=DwICAg&c=sJ6xIWYx-zLMB3EPkvcnVg&r=D88uS55Tats-jlFQAC1XryFUYq8B7Lk3StFbXzgsiB4&m=ohtd7ngjfrVvxFRQ914sbsc86_Im41uKSVc3O_ix3gM&s=-m6lcQoQ6TleIzATgu7ICUGL_8_Tjk_wISjMqVPHw8s&e= 
+%
+%  Edited by Aykut C. Satici on July 2022.
+%  Edited by Aykut C. Satici on February 2022.
+%  Edited by T Saab July 2021.
+%  Last Updated April 12, 2007
+%
+% Adapted from the American Physical Societies REVTeK-4 Pages
+% at https://urldefense.proofpoint.com/v2/url?u=http-3A__publish.aps.org&d=DwICAg&c=sJ6xIWYx-zLMB3EPkvcnVg&r=D88uS55Tats-jlFQAC1XryFUYq8B7Lk3StFbXzgsiB4&m=ohtd7ngjfrVvxFRQ914sbsc86_Im41uKSVc3O_ix3gM&s=0MkBr6VsOTYVW97Jm2x26uabjoQ1HT5VVAQ0au7898g&e= 
+%
+% ADVICE TO STUDENTS: Each time you write a paper, start with this
+%    template and save under a new filename.  If convenient, don't
+%    erase unneeded lines, just comment them out.  Often, they
+%    will be useful containers for information.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE
+% The preamble of a LaTeX document is the set of commands that precede
+% the \begin{document} line.  It contains a \documentclass line
+% to load the REVTeX-4 macro definitions and various \usepackage
+% lines to load other macro packages.
+%
+% ADVICE TO STUDENTS: This preamble contains a suggested set of
+%     class options to generate a ``Junior Lab'' look and feel that
+%     facilitate quick review and feedback from one's peers, TA's
+%     and section instructors.  Don't make substantial changes without
+%     first consulting your section instructor.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[aps,twocolumn,twoside,secnumarabic,balancelastpage,amsmath,amssymb,nofootinbib]{revtex4}
+
+% Documentclass Options
+    % aps, prl, rmp stand for American Physical Society, Physical Review Letters, and Reviews of Modern Physics, respectively
+    % twocolumn permits two columns, of course
+    % nobalancelastpage doesn't attempt to equalize the lengths of the two columns on the last page
+        % as might be desired in a journal where articles follow one another closely
+    % amsmath and amssymb are necessary for the subequations environment among others
+    % secnumarabic identifies sections by number to aid electronic review and commentary.
+    % nofootinbib forces footnotes to occur on the page where they are first referenced
+        % and not in the bibliography
+    % REVTeX 4 is a set of macro packages designed to be used with LaTeX 2e.
+        % REVTeX is well-suited for preparing manuscripts for submission to APS journals.
+
+\input{preamble.tex}
+
+%
+% And now, begin the document...
+% Students should not have to alter anything above this line
+%
+
+\begin{document}
+
+\input{./contents/title}
+\input{./contents/introduction}
+\input{./contents/apparatus}
+\input{./contents/results}
+\input{./contents/conclusion}
+% \input{./contents/bibremark}
+
+\bibliography{./bib/mechatronics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \input{./contents/appendices}
+
+
+\end{document}

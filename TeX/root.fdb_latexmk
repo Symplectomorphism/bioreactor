@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex root"] 1680794206 "root.aux" "root.bbl" "root" 1680794297 0
+["bibtex root"] 1680794696 "root.aux" "root.bbl" "root" 1680794720 0
   "./bib/mechatronics.bib" 1661886442 1984 16f25053f1e020a1b4991fc50374e200 ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/revtex4/apsrev.bst" 1602107563 43844 78e58abfb2d07832103f1e2f30cf6375 ""
-  "root.aux" 1680794297 3403 617614286a429700063f64558fd016be "lualatex"
+  "root.aux" 1680794720 3407 0a94089c8f924de0ab33c8205ab44dbf "lualatex"
   (generated)
   "root.bbl"
   "root.blg"
   (rewritten before read)
-["lualatex"] 1680794296 "root.tex" "root.pdf" "root" 1680794297 0
+["lualatex"] 1680794719 "root.tex" "root.pdf" "root" 1680794720 0
   "/home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc" 1680706860 81440 af196c0142d95f41173558bbb0de7a5b ""
   "/home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1672565318 127327 21b358d30855ffeaf6bd405fa33b4e25 ""
   "/home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc" 1672457862 128299 f09229626590eccd2e18673279cab2f9 ""
@@ -314,7 +314,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1664913378 13565 83bac25a8cf8630acccd6a7f8bb9f791 ""
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1672339844 4623329 5e28269c2aee4b9e2f0ef6bdcff03654 ""
   "/usr/local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt" 1672339860 11886421 3dc5aecd8b19155c6907bb92dcbcb5b7 ""
-  "contents/apparatus.tex" 1680794294 3557 24185bf58a9917cb9f93523741931214 ""
+  "contents/apparatus.tex" 1680794717 3788 3b2244a19eb2f827a6ce8d5870c39c10 ""
   "contents/conclusion.tex" 1680707140 37 8384fb754b804172c8f4011f37805d38 ""
   "contents/introduction.tex" 1680707083 41 ef8214ab71c89abd1347b2c815df19ff ""
   "contents/results.tex" 1680707117 31 181f1780e6ca1f0082a20cf9e6ba4664 ""
@@ -322,9 +322,9 @@
   "figures/circuit.png" 1680793610 75644 c6e9575235b50810daf3437588967045 ""
   "figures/pwm_filtered_one_two_final_signal.png" 1680774005 92416 a87cc75a49e500a720f0223e794d8660 ""
   "preamble.tex" 1680793884 2872 f1d4c59221b93acaf59dd345a0232b84 ""
-  "root.aux" 1680794297 3403 617614286a429700063f64558fd016be "lualatex"
-  "root.bbl" 1680794206 584 9411fe63aa1c4dcc3282b86a381435fa "bibtex root"
-  "root.out" 1680794297 1056 f3ce4a6e9362247fb61f16085132638e "lualatex"
+  "root.aux" 1680794720 3407 0a94089c8f924de0ab33c8205ab44dbf "lualatex"
+  "root.bbl" 1680794696 584 9411fe63aa1c4dcc3282b86a381435fa "bibtex root"
+  "root.out" 1680794720 1056 f3ce4a6e9362247fb61f16085132638e "lualatex"
   "root.tex" 1680707163 3349 2245a0ed307c39aeb73a9a5266c3ac2c ""
   (generated)
   "root.aux"

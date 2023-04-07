@@ -1,9 +1,13 @@
 \section{Analysis and Results}
 
-\begin{figure*}[b]
+The circuit that LTSpice simulates is redrawn in Figure~\ref{fig:sig_circuit}
+for analysis.
+
+\begin{figure*}[h]
 \begin{circuitikz}[]
     \draw (0,0) to[vsourcesin, name=vs] (0,6);
-    \node [left, align=center, inner sep=12pt] at (vs.e) {Teensy\\PWM};
+    \node [below left, align=center, inner sep=12pt] at (vs.e)
+    {$0-3.3$\unit{\volt}\\$90$\unit{\hertz} PWM};
     \draw (0,6) to [R=$R$] (2,6) to [C=$C$] (2,0) to node[ground]{} (2,0);
     \node [ground] at (0,0) {};
 
@@ -25,6 +29,14 @@
     coordinate (tmp) node[ground]{} (FB) to [R=$R_f$, *-] (FB -| A2.out) -- 
     (A2.out);
 
-    \draw ($ (FB) + (2.38, 0) $) to [R=$R_{\text{load}}$] ($ (tmp) + (2.38, 0) $) node[ground]{};
+    \draw ($ (FB) + (2.38, 0) $) to [R=$R_{\text{load}}$] ($ (tmp) + (2.38, 0)
+    $) node[ground]{};
+
+    \draw ($ (FB) + (2.38, 0) $) to[short, *-o] ++(1,0) node[above]{$v_o$};
 \end{circuitikz}
+\caption{The signal generator circuit.}
+\label{fig:sig_circuit}
 \end{figure*}
+
+The $0-3.3$\unit{\volt} PWM signal is filtered to extract the modulated sine
+wave with a the first $RC$ combination.

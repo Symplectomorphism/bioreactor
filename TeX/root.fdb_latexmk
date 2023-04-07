@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex root"] 1680888780 "root.aux" "root.bbl" "root" 1680898026
+["bibtex root"] 1680898417 "root.aux" "root.bbl" "root" 1680904391
   "./bib/mechatronics.bib" 1680718276 1984 16f25053f1e020a1b4991fc50374e200 ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/revtex4/apsrev.bst" 1602107563 43844 78e58abfb2d07832103f1e2f30cf6375 ""
-  "root.aux" 1680898026 3587 665f8500df14dc0128e191719cde3200 "lualatex"
+  "root.aux" 1680904391 3837 0922c5320157685e6b1ad10a8272ada7 "lualatex"
   (generated)
   "root.bbl"
   "root.blg"
-["lualatex"] 1680898024 "root.tex" "root.pdf" "root" 1680898026
+["lualatex"] 1680904390 "root.tex" "root.pdf" "root" 1680904391
   "/home/aykut/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc" 1660769543 81440 46833218f0fa8604eab6e70ea6a0b08d ""
   "/home/aykut/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono9-regular.luc" 1660769545 81875 9e8265965c5b4584efdeff727dbbed59 ""
   "/home/aykut/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1650914519 127327 a10453e432aae9a08361721794e3f42f ""
@@ -80,9 +80,11 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1248133631 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1248133631 32442 c975af247b6702f7ca0c299af3616b80 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
@@ -327,14 +329,14 @@
   "contents/apparatus.tex" 1680803313 3788 3b2244a19eb2f827a6ce8d5870c39c10 ""
   "contents/conclusion.tex" 1680718276 37 8384fb754b804172c8f4011f37805d38 ""
   "contents/introduction.tex" 1680718276 41 ef8214ab71c89abd1347b2c815df19ff ""
-  "contents/results.tex" 1680898023 1265 eace39beab1037f0bdf1595585cf9b22 ""
+  "contents/results.tex" 1680904389 1662 1664052ccf69a0db0a24871120d63187 ""
   "contents/title.tex" 1680718276 591 f6fc4d9360b5d4cfd5c24020e4070bd4 ""
   "figures/circuit.png" 1680803313 75644 c6e9575235b50810daf3437588967045 ""
   "figures/pwm_filtered_one_two_final_signal.png" 1680803313 92416 a87cc75a49e500a720f0223e794d8660 ""
   "preamble.tex" 1680897430 2878 6db28d4f459aa48ed0313939caa76c48 ""
-  "root.aux" 1680898026 3587 665f8500df14dc0128e191719cde3200 "lualatex"
-  "root.bbl" 1680888780 584 9411fe63aa1c4dcc3282b86a381435fa "bibtex root"
-  "root.out" 1680898026 1056 0cf8eba30bd4454a3d089388fd959067 "lualatex"
+  "root.aux" 1680904391 3837 0922c5320157685e6b1ad10a8272ada7 "lualatex"
+  "root.bbl" 1680898417 584 9411fe63aa1c4dcc3282b86a381435fa "bibtex root"
+  "root.out" 1680904391 1056 0cf8eba30bd4454a3d089388fd959067 "lualatex"
   "root.tex" 1680718276 3349 2245a0ed307c39aeb73a9a5266c3ac2c ""
   (generated)
   "root.aux"

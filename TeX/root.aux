@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -13,7 +16,6 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\bibdata{./bib/mechatronics}
 \newlabel{FirstPage}{{}{1}{}{Doc-Start}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section*.1}\protected@file@percent }
 \newlabel{sec:intro}{{1}{1}{}{section*.1}{}}
@@ -43,12 +45,14 @@
 \pgfsyspdfmark {pgfid21}{44221724}{17436209}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The realistic signal generator circuit.\relax }}{1}{figure.caption.10}\protected@file@percent }
 \newlabel{fig:real_sig_gen}{{2}{1}{The realistic signal generator circuit.\relax }{figure.caption.10}{}}
+\bibdata{./bib/mechatronics}
 \global \chardef \firstnote@num\z@ \relax 
 \bibstyle{apsrev}
-\newlabel{LastPage}{{}{1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The response of the realistic simulation.\relax }}{2}{figure.caption.11}\protected@file@percent }
 \newlabel{fig:response}{{3}{2}{The response of the realistic simulation.\relax }{figure.caption.11}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Analysis and Results}{2}{section*.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion and Conclusions}{2}{section*.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{2}{section*.14}\protected@file@percent }
-\gdef \@abspage@last{2}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion and Conclusions}{2}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{2}{section*.15}\protected@file@percent }
+\newlabel{LastBibItem}{{0}{2}{}{section*.15}{}}
+\newlabel{LastPage}{{}{3}}
+\gdef \@abspage@last{3}

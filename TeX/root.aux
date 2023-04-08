@@ -2,13 +2,10 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
-\global\let\oldcontentsline\contentsline
-\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
-\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -16,45 +13,41 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{pie610}
 \newlabel{FirstPage}{{}{1}{}{Doc-Start}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section*.1}\protected@file@percent }
 \newlabel{sec:intro}{{1}{1}{}{section*.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Apparatus and Experiment}{1}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Theoretical Analysis}{1}{section*.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Basic Lowpass Filter Design}{1}{section*.3}\protected@file@percent }
 \newlabel{eq:de}{{1}{1}{}{equation.2.1}{}}
 \newlabel{eq:de_sol}{{2}{1}{}{equation.2.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces An R-C low-pass filter circuit.\relax }}{1}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces An first-order low-pass filter circuit.\relax }}{1}{figure.caption.4}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:RC}{{1}{1}{An R-C low-pass filter circuit.\relax }{figure.caption.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Realistic Simulation}{1}{section*.5}\protected@file@percent }
-\@writefile{tdo}{\contentsline {todo}{cite}{1}{section*.6}\protected@file@percent }
-\pgfsyspdfmark {pgfid2}{22993596}{33905779}
-\pgfsyspdfmark {pgfid5}{40731933}{33872978}
-\pgfsyspdfmark {pgfid6}{44221724}{33693934}
-\@writefile{tdo}{\contentsline {todo}{cite}{1}{section*.7}\protected@file@percent }
-\pgfsyspdfmark {pgfid7}{32426713}{24001578}
-\pgfsyspdfmark {pgfid10}{40731933}{23968777}
-\pgfsyspdfmark {pgfid11}{44221724}{23789733}
-\@writefile{tdo}{\contentsline {todo}{cite}{1}{section*.8}\protected@file@percent }
-\pgfsyspdfmark {pgfid12}{24933771}{19155382}
-\pgfsyspdfmark {pgfid15}{40731933}{19122581}
-\pgfsyspdfmark {pgfid16}{44221724}{18943537}
-\@writefile{tdo}{\contentsline {todo}{cite}{1}{section*.9}\protected@file@percent }
-\pgfsyspdfmark {pgfid17}{23266590}{17648054}
-\pgfsyspdfmark {pgfid20}{40731933}{17615253}
-\pgfsyspdfmark {pgfid21}{44221724}{17436209}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The realistic signal generator circuit.\relax }}{1}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:real_sig_gen}{{2}{1}{The realistic signal generator circuit.\relax }{figure.caption.10}{}}
+\newlabel{fig:RC}{{1}{1}{An first-order low-pass filter circuit.\relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Second-Order LPF Design}{1}{section*.5}\protected@file@percent }
+\newlabel{ssec:second}{{2.2}{1}{}{section*.5}{}}
+\citation{op292}
+\citation{teensy}
+\citation{ltspice}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The signal generator circuit.\relax }}{2}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:sig_circuit}{{2}{2}{The signal generator circuit.\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{2}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Simulation}{2}{section*.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The signal generator circuit in LTSpice\relax }}{2}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:real_sig_gen}{{3}{2}{The signal generator circuit in LTSpice\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The response from the simulation for one full period.\relax }}{2}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:response}{{4}{2}{The response from the simulation for one full period.\relax }{figure.caption.10}{}}
 \bibdata{./bib/mechatronics}
+\bibcite{pie610}{{1}{}{{{Physik Instrumente}}}{{}}}
+\bibcite{op292}{{2}{}{{{Analog Devices}}}{{}}}
+\bibcite{teensy}{{3}{}{{{PJRC}}}{{}}}
+\bibcite{ltspice}{{4}{}{{{Analog Devices}}}{{}}}
 \global \chardef \firstnote@num\z@ \relax 
 \bibstyle{apsrev}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The response of the realistic simulation.\relax }}{2}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:response}{{3}{2}{The response of the realistic simulation.\relax }{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Analysis and Results}{2}{section*.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion and Conclusions}{2}{section*.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{2}{section*.15}\protected@file@percent }
-\newlabel{LastBibItem}{{0}{2}{}{section*.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The signal generator circuit.\relax }}{3}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:sig_circuit}{{4}{3}{The signal generator circuit.\relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Experiment}{3}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion and Conclusions}{3}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Acknowledgment}{3}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{3}{section*.14}\protected@file@percent }
+\newlabel{LastBibItem}{{4}{3}{}{section*.14}{}}
 \newlabel{LastPage}{{}{3}}
 \gdef \@abspage@last{3}

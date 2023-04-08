@@ -2,50 +2,62 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: root.aux
 The style file: apsrev.bst
-I found no \citation commands---while reading file root.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ./bib/mechatronics.bib
+Warning--entry type for "teensy" isn't style-file defined
+--line 72 of file ./bib/mechatronics.bib
+Warning--entry type for "ltspice" isn't style-file defined
+--line 79 of file ./bib/mechatronics.bib
+I was expecting a `,' or a `}'---line 83 of file ./bib/mechatronics.bib
+ :   
+ :   urldate = {2023-04-07},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "op292" isn't style-file defined
+--line 86 of file ./bib/mechatronics.bib
+Warning--entry type for "pie610" isn't style-file defined
+--line 93 of file ./bib/mechatronics.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 0 entries,
+You've used 4 entries,
             3411 wiz_defined-function locations,
-            1152 strings with 10010 characters,
-and the built_in function-call counts, 46 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 9
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 15
-num.names$ -- 0
-pop$ -- 0
+            1167 strings with 10413 characters,
+and the built_in function-call counts, 1454 in all, are:
+= -- 92
+> -- 28
+< -- 4
++ -- 17
+- -- 8
+* -- 150
+:= -- 213
+add.period$ -- 4
+call.type$ -- 4
+change.case$ -- 20
+chr.to.int$ -- 3
+cite$ -- 4
+duplicate$ -- 132
+empty$ -- 133
+format.name$ -- 20
+if$ -- 257
+int.to.chr$ -- 2
+int.to.str$ -- 5
+missing$ -- 16
+newline$ -- 27
+num.names$ -- 12
+pop$ -- 48
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 16
 quote$ -- 0
-skip$ -- 1
+skip$ -- 50
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 44
+swap$ -- 62
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 24
 warning$ -- 0
-while$ -- 0
+while$ -- 8
 width$ -- 0
-write$ -- 14
+write$ -- 50
 (There was 1 error message)

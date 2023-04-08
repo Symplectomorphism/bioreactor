@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.29)  7 APR 2023 20:19
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.29)  7 APR 2023 22:02
  restricted system commands enabled.
  file:line:error style messages enabled.
 **root.tex
@@ -860,27 +860,41 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )) (./contents/introduction.tex) (./contents/analysis.tex [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./contents/results.tex
-<./figures/circuit.png, id=98, 2569.6pt x 761.84625pt>
+<./figures/circuit.png, id=92, 2569.6pt x 761.84625pt>
 File: ./figures/circuit.png Graphic file (type png)
 <use ./figures/circuit.png>
-Package luatex.def Info: ./figures/circuit.png  used on input line 20.
+Package luatex.def Info: ./figures/circuit.png  used on input line 25.
 (luatex.def)             Requested size: 227.62204pt x 67.48209pt.
 
-Underfull \hbox (badness 1019) in paragraph at lines 25--33
+Underfull \hbox (badness 1019) in paragraph at lines 30--38
 []\TU/lmr/m/n/10 The sim-u-la-tion gen-er-ates the rel-e-vant volt-age re-
  []
 
-<./figures/pwm_filtered_one_two_final_signal.png, id=100, 2565.585pt x 1311.90125pt>
+<./figures/pwm_filtered_one_two_final_signal.png, id=94, 2565.585pt x 1311.90125pt>
 File: ./figures/pwm_filtered_one_two_final_signal.png Graphic file (type png)
 <use ./figures/pwm_filtered_one_two_final_signal.png>
-Package luatex.def Info: ./figures/pwm_filtered_one_two_final_signal.png  used on input line 35.
+Package luatex.def Info: ./figures/pwm_filtered_one_two_final_signal.png  used on input line 40.
 (luatex.def)             Requested size: 255.0pt x 130.37708pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 35--36
+Overfull \hbox (9.0pt too wide) in paragraph at lines 40--41
  [][] 
  []
 
-) (./contents/conclusion.tex) (./contents/acknowledgment.tex [2<./figures/circuit.png><./figures/pwm_filtered_one_two_final_signal.png>]) (./root.bbl
+<./figures/prototype.jpg, id=96, 4015.0pt x 3011.25pt>
+File: ./figures/prototype.jpg Graphic file (type jpg)
+<use ./figures/prototype.jpg>
+Package luatex.def Info: ./figures/prototype.jpg  used on input line 55.
+(luatex.def)             Requested size: 255.0pt x 191.23523pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 55--56
+ [][] 
+ []
+
+) (./contents/conclusion.tex) (./contents/acknowledgment.tex) [2<./figures/circuit.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 64.
+
+(./root.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 16--19
  []\TU/lmr/m/n/9 Physik In-stru-mente, \TU/lmr/m/it/9 E-610\TU/lmr/m/n/9 , URL
  []
@@ -915,26 +929,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--32
  \TU/lmtt/m/n/9 design-[]tools-[]and-[]calculators/ltspice-[]simulator.
  []
 
-) [3] (./root.aux)
+) [3<./figures/pwm_filtered_one_two_final_signal.png><./figures/prototype.jpg>] (./root.aux)
 Package rerunfilecheck Info: File `root.out' has not changed.
-(rerunfilecheck)             Checksum: 7620CB2B624A56FFCDBBF446317C1F84;1304.
+(rerunfilecheck)             Checksum: D320C9F2263A6302558F6A180C159D56;1304.
 )
 
 Here is how much of LuaTeX's memory you used:
- 49691 strings out of 478384
+ 49704 strings out of 478384
  195355,1977958 words of node,token memory allocated
  2629 words of node memory still in use:
    73 hlist, 10 vlist, 9 rule, 12 math, 44 glue, 39 kern, 92 glyph, 45 attribute, 60 glue_spec, 45 attribute_list, 4 pdf_action nodes
-   avail lists: 1:11,2:6498,3:2705,4:111,5:981,6:99,7:18979,8:149,9:2030,10:17,11:943
- 68386 multiletter control sequences out of 65536+600000
+   avail lists: 1:11,2:6409,3:2658,4:84,5:973,6:89,7:18509,8:149,9:1967,10:16,11:913
+ 68394 multiletter control sequences out of 65536+600000
  78 fonts using 5354679 bytes
  119i,16n,114p,481b,1272s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on root.pdf (3 pages, 329027 bytes).
+Output written on root.pdf (3 pages, 856514 bytes).
 
-PDF statistics: 257 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 131072)
+PDF statistics: 254 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 131072)
  96 words of extra memory for PDF output out of 10000 (max. 100000000)
 

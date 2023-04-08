@@ -1,6 +1,11 @@
 \section{Results}
 
+We provide extensive simulation and experimental data and their interpretation,
+supporting that the proposed analog signal generator works as intended.
+
+\vspace{-1em}
 \subsection{Simulation}
+\vspace{-1em}
 
 We perform a realistic simulation with a second-order low-pass filter we came up
 with in Section~\ref{ssec:second}. One of the important aspects of this design
@@ -38,4 +43,19 @@ sent to the PI controller.
 \end{figure}
 
 
+\vspace{-1em}
 \subsection{Experiment}
+\vspace{-1em}
+
+This setup is implemented on a simple setup on my table top by lighting two red
+LEDs, first one using the filtered PWM and the second using the amplified
+signal, both obtained using the circuit in Section~\ref{ssec:second}.
+
+\begin{figure}[t]
+\includegraphics[width=0.5\textwidth]{./figures/prototype.jpg}
+\caption{Prototype working on a LED} 
+\label{fig:exp}
+\end{figure}
+
+We will perform a final verification on the real piezoelectric system early next
+week, recording the input signal properly using an oscilloscope.

@@ -113,8 +113,8 @@ This is a fully-damped transfer function with poles at $s_{1,2} =
 \nicefrac{1}{RC}$. In other words, the cut-off frequency of this filter is at $f
 = \frac{1}{2\pi RC}$ with a roll-off of $40$\unit{\decibel} per decade. Contrast
 this to the first-order filter of the previous subsection where the roll-off was
-$20$\unit{decibel} per decade. The greater roll-off rate allows us to can select
-$2\pi RC \ll \nicefrac{1}{f}$ while simultaneously achieving excellent
+$20$\unit{\decibel} per decade. The greater roll-off rate allows us be able to
+select $2\pi RC \ll \nicefrac{1}{f}$ while simultaneously achieving excellent
 high-frequency attenuation.
 
 Our desired signal is a $90$\unit{\hertz} sinusoidal. We do not want to lose
@@ -123,11 +123,11 @@ unity gain at this frequency. We set $2\pi RC \leq \nicefrac{1}{900}$ or $RC
 \leq 1.768 \times 10^{-4}$\unit{\ohm\farad} to satisfy this requirement. Using
 some standard values of the resistance $R = 1$\unit{\kilo\ohm} and the
 capacitance $C = 104$\unit{\nano\farad}, we obtain $RC = 1.04 \times 10^{-4}$,
-achieving the desired goal. The attenuation at Teensy's PWM career frequency of
+achieving the desired goal. The attenuation at Teensy's PWM carrier frequency of
 $36.6$\unit{\kilo\hertz} is found by \[ 20 \log_{10}\left\{\abs{H(j 2\pi
 36600)}\right\} = -55.163\,\unit{\decibel}. \]
 
-We want to amplify the input voltage $v_i$ thrice in order to hit the
+Lastly, we want to amplify the input voltage $v_i$ thrice in order to hit the
 $0-10$\unit{\volt} mark. The gain of the non-inverting amplifier is $k = 1 +
 \nicefrac{R_f}{R_{in}}$. We choose $R_f = 2$\unit{\kilo\ohm} and $R_{in} =
 1$\unit{\kilo\ohm} to achieve $k = 3$. The high gain bandwidth product of the

@@ -49,13 +49,13 @@ FASTRUN void timer0_callback() {
      *
      * */
     // delayMicroseconds(21); // to slow it down a bit if required 3 us to 16383 us
-    delayMicroseconds(60); // Can't see the light flickering if faster.
+    delayMicroseconds(200); // Can't see the light flickering if faster.
 }
 
 // the setup routine runs once when you press reset:
 IntervalTimer timer0;
 FASTRUN void setup() {
-    analogWriteFrequency(pwmpin, 36600)
+    analogWriteFrequency(pwmpin, 36600);
     analogWriteResolution(12);
     pinMode(pwmpin,OUTPUT);
     analogWrite(pwmpin,0);

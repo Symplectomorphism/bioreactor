@@ -138,3 +138,90 @@ approximately given by \[ \frac{V_o(s)}{V_i(s)} =
 \frac{k}{\frac{k}{2\pi\text{GBP}}s + 1} \approx \frac{3}{1.194\times 10^{-7}s +
 1}, \] which will have a firm unity gain at our desired oscillation frequency of
 $90$\unit{\hertz}.
+
+
+% \vspace{-1em}
+% \subsection{Adding a HPF for DC removal}
+% \vspace{-1em}
+% 
+% Any remaining DC component of the signal at $v_i$ may be removed by adding a
+% capacitor between the inverting terminal of the amplifier op-amp and the ground
+% as depicted in Figure~\ref{fig:hpf}. Assuming an ideal op-amp for the moment,
+% the transfer function between $v_o$ and $v_i$ is given by
+% \[\frac{V_o(s)}{V_i(s)} = \frac{R_fC_{in}s}
+% 
+% 
+% % \begin{figure}[h]
+% % \begin{circuitikz}[]
+% %     \draw (0,1) node[label={above:$v_i$}] {} to[short, o-] ++(0.5, 0) to
+% %     [C=$C_1$] ++(1.0,0) -| ++(0.5, 0) -- ++(0.0,0)
+% %     node[label={above:$\tilde{v}_i$}] {} to[short, *-] ++(0,-0.25) to [R=$R_1$]
+% %     (2,-1.0) to node[ground]{} (2,-1.0);
+% %     
+% %     \node [op amp, noinv input up](A2) at (4.5, 0.51) {\texttt{OP292}};
+% %     \draw (A2.+) to[short] (2.0,1.0);
+% %     \draw[-latex] (A2.up) -- ++(0,0.5) node [above] {$V_+$};
+% %     \draw (A2.down) -- ++(0,-0.25) node[ground] {};
+% %     \draw (A2.-) -- ++(0,-2.0) coordinate(FB) to [R=$R_{in}$] (3.3, -4)
+% %     coordinate (tmp) node[ground]{} (FB) to [R=$R_f$, *-] (FB -| A2.out) -- 
+% %     (A2.out);
+% % 
+% %     \draw ($ (FB) + (2.38, 0) $) to [R=$R_{\text{load}}$] ($ (tmp) + (2.38, 0)
+% %     $) node[ground]{};
+% % 
+% %     \draw ($ (FB) + (2.38, 0) $) to[short, *-o] ++(1,0) node[above]{$v_o$};
+% % \end{circuitikz}
+% % \caption{High-pass filter to remove leaking DC.}
+% % \label{fig:hpf}
+% % \end{figure}
+% 
+% 
+% \begin{figure}[h]
+% \begin{circuitikz}[]
+%     \draw (0,1) node[label={above:$v_i$}] {} to[short, o-] ++(0.5,0);
+%     
+%     \node [op amp, noinv input up](A2) at (2.0, 0.51) {\texttt{OP292}};
+%     \draw (A2.+) to[short] (0.5,1.0);
+%     \draw[-latex] (A2.up) -- ++(0,0.5) node [above] {$V_+$};
+%     \draw (A2.down) -- ++(0,-0.25) node[ground] {};
+%     \draw (A2.-) -- ++(0,-2.0) coordinate(FB) to [R=$R_{in}$] ++(0, -2.0) to
+%     [C=$C_{in}$] (0.82, -5) coordinate (tmp) node[ground]{} (FB) to [R=$R_f$, *-]
+%     (FB -| A2.out) -- (A2.out);
+% 
+%     \draw ($ (FB) + (2.38, 0) $) to [R=$R_{\text{load}}$] ($ (tmp) + (2.42, 0)
+%     $) node[ground]{};
+% 
+%     \draw ($ (FB) + (2.38, 0) $) to[short, *-o] ++(1,0) node[above]{$v_o$};
+% \end{circuitikz}
+% \caption{High-pass filter to remove leaking DC.}
+% \label{fig:hpf}
+% \end{figure}
+
+\vspace{-1em}
+\subsection{Sallen-Key Architecture}
+\label{ssec:sallenkey}
+\vspace{-1em}
+
+Another well-known architecture that works well for this sort of problem is the
+Sallen-Key low-pass filter as shown in Figure~\ref{fig:sallenkey}.
+
+\begin{figure}[h]
+\begin{circuitikz}[scale=1]\draw
+(5,.5) node [op amp] (opamp) {}
+(0,0) node [left] {$v_f$} to [R, l=$R_d$, o-*] (2,0)
+to [R, l=$R_d$, *-*] (opamp.+)
+to [C, l_=$C_{d}$, *-] ($(opamp.+)+(0,-2)$) node [ground] {}
+(opamp.out) |- (3.5,2) to [C, l_=$C_{d}$, *-] (2,2) to [short] (2,0)
+(opamp.-) -| (3.5,2)
+(opamp.out) to [short, *-o] (7,.5) node [right] {$v_i$};
+\end{circuitikz}
+\caption{Sallen Key (second-order) low-pass filter.}
+\label{fig:sallenkey}
+\end{figure}
+
+The cut-off frequency of this design is given by the same expression as in
+Section~\ref{ssec:second}. Simulation shows that some good values for the
+resistances $R_d$ and the capacitances $C_d$ are $R_d = 68$\unit{\kilo\ohm} and
+$C_d = 1$\unit{\nano\farad}, with a cutoff frequency of $f \approx
+2340$\unit{\hertz}. Even $R_d = 100$\unit{\kilo\ohm} works well with $C_d =
+1$\unit{\nano\farad} with a cutoff frequency at $f \approx 1591$\unit{\hertz}.

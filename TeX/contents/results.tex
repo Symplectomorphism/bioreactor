@@ -1,4 +1,6 @@
+\vspace{-1em}
 \section{Results}
+\vspace{-1em}
 
 We provide extensive simulation and experimental data and their interpretation,
 supporting that the proposed analog signal generator works as intended.
@@ -40,6 +42,18 @@ sent to the PI controller.
 \includegraphics[width=0.5\textwidth]{./figures/pwm_filtered_one_two_final_signal.png}
 \caption{The response from the simulation for one full period.} 
 \label{fig:response}
+\end{figure}
+
+
+The performance of the Sallen-Key architecture from Section~\ref{ssec:sallenkey}
+is shown in Figure~\ref{fig:sallenkey_sim}, where the values for the resistances
+were taken to be $R_d = 68$\unit{\kilo\ohm} and capacitances to be $C_d =
+1$\unit{\nano\farad}.
+
+\begin{figure}[t]
+\includegraphics[width=0.5\textwidth]{./figures/sallenkey.png}
+\caption{The response of the Sallen-Key architecture.}
+\label{fig:sallankey_sim}
 \end{figure}
 
 

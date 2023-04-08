@@ -557,6 +557,10 @@ INPUT ./figures/circuit.png
 INPUT ./figures/pwm_filtered_one_two_final_signal.png
 INPUT ./figures/pwm_filtered_one_two_final_signal.png
 INPUT ./figures/pwm_filtered_one_two_final_signal.png
+INPUT /home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
+INPUT ./figures/sallenkey.png
+INPUT ./figures/sallenkey.png
+INPUT ./figures/sallenkey.png
 INPUT ./figures/prototype.jpg
 INPUT ./figures/prototype.jpg
 INPUT ./figures/prototype.jpg

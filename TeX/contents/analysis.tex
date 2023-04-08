@@ -43,7 +43,7 @@ choose the values of $R$ and $C$ such that $\omega R C \ll 1$ or $2\pi RC \ll
     \draw (2,0) to [short, *-o] ++(1,0);
     \node [ground] at (2,0) {};
 \end{circuitikz}
-\caption{An first-order low-pass filter circuit.}
+\caption{A first-order low-pass filter circuit.}
 \label{fig:RC}
 \end{figure}
 
@@ -110,12 +110,12 @@ $v_t$ to the input $v_i$ to the non-inverting amplifier op-amp is given by \[
 \frac{V_i(s)}{V_t(s)} = H(s) = \frac{1}{R^2C^2s^2+2RCs+1}.\]
 %
 This is a fully-damped transfer function with poles at $s_{1,2} =
-\nicefrac{1}{RC}$. In other words, the cut-off frequency of this filter is at $f
-= \frac{1}{2\pi RC}$ with a roll-off of $40$\unit{\decibel} per decade. Contrast
-this to the first-order filter of the previous subsection where the roll-off was
-$20$\unit{\decibel} per decade. The greater roll-off rate allows us be able to
-select $2\pi RC \ll \nicefrac{1}{f}$ while simultaneously achieving excellent
-high-frequency attenuation.
+-\nicefrac{1}{RC}$. In other words, the cut-off frequency of this filter is at
+$f = \frac{1}{2\pi RC}$ with a roll-off of $40$\unit{\decibel} per decade.
+Contrast this to the first-order filter of the previous subsection where the
+roll-off was $20$\unit{\decibel} per decade. The greater roll-off rate allows us
+be able to select $2\pi RC \ll \nicefrac{1}{f}$ while simultaneously achieving
+excellent high-frequency attenuation.
 
 Our desired signal is a $90$\unit{\hertz} sinusoidal. We do not want to lose
 this signal, i.e., we want our transfer function $H(s)$ to approximately have a

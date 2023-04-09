@@ -523,7 +523,6 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT /home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc
-INPUT /home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc
 INPUT ./contents/introduction.tex
 INPUT ./contents/introduction.tex
 INPUT /home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-bold.luc

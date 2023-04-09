@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex root"] 1681077346 "root.aux" "root.bbl" "root" 1681077504 0
+["bibtex root"] 1681078263 "root.aux" "root.bbl" "root" 1681078298 0
   "./bib/mechatronics.bib" 1680929910 2725 2c2ce99f67cad75d62dd5abf69971f3b ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "root.aux" 1681077504 5074 a72b173b71fcfe513e17e9b729302370 "lualatex"
+  "root.aux" 1681078298 5445 bf2d49337332b289d25886e5c51cab1f "lualatex"
   (generated)
   "root.bbl"
   "root.blg"
   (rewritten before read)
-["lualatex"] 1681077502 "root.tex" "root.pdf" "root" 1681077504 0
+["lualatex"] 1681078296 "root.tex" "root.pdf" "root" 1681078298 0
   "/home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1672565318 81837 d0bcf5f32a3b606c616c15917a6a0ee8 ""
   "/home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono9-regular.luc" 1679615937 81875 fc990e20d6cedfcd1b8b8c3c30aa979b ""
   "/home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1672565318 128410 2c8843a4c264e985170a9d377f3581dd ""
@@ -342,16 +342,17 @@
   "contents/appendices.tex" 1681072140 7747 bdfbf0202c09f00bb7dd0887f1e69ae7 ""
   "contents/conclusion.tex" 1681076906 597 2983a24cf273fb284247cc7e6d1d37b2 ""
   "contents/introduction.tex" 1681077178 606 f2c8eef6e32f84b6c50b11a987ea139b ""
-  "contents/results.tex" 1681076873 3680 76ef58619a5223c53d1b2bd08dcac14e ""
+  "contents/results.tex" 1681078295 4041 39f642ae360dbd8613985685d73d0708 ""
   "contents/title.tex" 1681072530 701 fa9ddc5f1344c860508dbd4f33e0d9b3 ""
   "figures/circuit.png" 1680919625 80060 6fb1015400d106df9c3cc221362fe326 ""
   "figures/output_osc.jpg" 1681021201 122871 a0df6b434110bce601801f056896966b ""
   "figures/pwm_filtered_one_two_final_signal.png" 1680919568 64712 3d8f0643e0fe31bfd2246b6ddd17ee11 ""
   "figures/sallenkey.png" 1680938038 115539 cdcdc1918ace07a92db06e1774193e5c ""
+  "figures/teensy_pwm_osc.jpg" 1681078110 99688 f186524f8941575fe67f8d1e703a1a62 ""
   "preamble.tex" 1681070354 2963 e73e5c966e3cf0f3a9590345387e3b78 ""
-  "root.aux" 1681077504 5074 a72b173b71fcfe513e17e9b729302370 "lualatex"
-  "root.bbl" 1681077346 1024 671a39441773e1755936a7902729c2eb "bibtex root"
-  "root.out" 1681077504 1742 e4a362d24615a38ed5c4e785de031daf "lualatex"
+  "root.aux" 1681078298 5445 bf2d49337332b289d25886e5c51cab1f "lualatex"
+  "root.bbl" 1681078263 1024 671a39441773e1755936a7902729c2eb "bibtex root"
+  "root.out" 1681078298 1742 41896c80bd1ad79ad990f4e65fd477d0 "lualatex"
   "root.tex" 1681063656 3378 8b1082f8d50d40f6a4a3c9a2b1ef7101 ""
   (generated)
   "root.aux"

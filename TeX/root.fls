@@ -565,6 +565,9 @@ INPUT ./figures/pwm_filtered_one_two_final_signal.png
 INPUT ./figures/sallenkey.png
 INPUT ./figures/sallenkey.png
 INPUT ./figures/sallenkey.png
+INPUT ./figures/teensy_pwm_osc.jpg
+INPUT ./figures/teensy_pwm_osc.jpg
+INPUT ./figures/teensy_pwm_osc.jpg
 INPUT ./figures/output_osc.jpg
 INPUT ./figures/output_osc.jpg
 INPUT ./figures/output_osc.jpg

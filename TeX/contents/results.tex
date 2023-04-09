@@ -67,6 +67,16 @@ Sallen-Key significantly. We will implement this filter in our final design.
 \vspace{-1em}
 
 The Sallen-Key architecture is implemented on a simple setup on my tabletop.
+A snapshot of Teensy's PWM signal that modulates the desired sine-wave output is
+provided in Figure~\ref{fig:teensy_pwm}.
+
+
+\begin{figure}[bh]
+    \includegraphics[width=0.5\textwidth]{./figures/teensy_pwm_osc.jpg}
+    \caption{A snapshot of Teensy's PWM signal with a carrier frequency of
+    $36.6$\unit{\kilo\hertz}.}
+    \label{fig:teensy_pwm}
+\end{figure}
 
 % \begin{figure}[t]
 % \includegraphics[width=0.5\textwidth]{./figures/prototype.jpg}
@@ -74,14 +84,14 @@ The Sallen-Key architecture is implemented on a simple setup on my tabletop.
 % \label{fig:exp}
 % \end{figure}
 
-\begin{figure}[bh]
-    \includegraphics[width=0.5\textwidth]{./figures/output_osc.jpg}
-    \caption{The response of the second-order Sallen-Key filter.}
-    \label{fig:sallenkey_osc}
-\end{figure}
-
 Figure~\ref{fig:sallenkey_osc} shows the response of the second-order Sallen-Key
 LPF observed through an oscilloscope. This is the output of the signal generator
 in response to the Teensy generated $90$\unit{\hertz} $0-3.3$\unit{\volt} PWM
 signal modulating the desired sine wave. This response is satisfactory and
 should drive the PI controller without any issues.
+
+\begin{figure}[bh]
+    \includegraphics[width=0.5\textwidth]{./figures/output_osc.jpg}
+    \caption{The response of the second-order Sallen-Key filter.}
+    \label{fig:sallenkey_osc}
+\end{figure}

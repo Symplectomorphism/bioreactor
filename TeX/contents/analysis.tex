@@ -50,8 +50,8 @@ choose the values of $R$ and $C$ such that $\omega R C \ll 1$ or $2\pi RC \ll
 Unfortunately, our actual input from the microcontroller is not a pure sine
 wave, rather a PWM signal. Therefore, we also need the value of $2\pi RC$ to be
 large so that it attenuates the high frequencies present in the PWM signal. This
-is difficult to achieve with just a single low-pass filter. Hence, we design a
-second-order low-pass filter in the next subsection.
+requirement is difficult to achieve with just a first-order low-pass filter,
+leading us to design a second-order low-pass filter in the next subsections.
 
 \vspace{-1em}
 \subsection{Second-Order LPF Design}

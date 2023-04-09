@@ -1,8 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: root.aux
-The style file: apsrev.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+The style file: plainnat.bst
 Database file #1: ./bib/mechatronics.bib
 Warning--entry type for "teensy" isn't style-file defined
 --line 72 of file ./bib/mechatronics.bib
@@ -12,47 +11,49 @@ Warning--entry type for "op292" isn't style-file defined
 --line 87 of file ./bib/mechatronics.bib
 Warning--entry type for "pie610" isn't style-file defined
 --line 94 of file ./bib/mechatronics.bib
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty year in ltspice
+Warning--empty year in op292
+Warning--empty year in pie610
+Warning--empty year in teensy
 You've used 4 entries,
-            3411 wiz_defined-function locations,
-            1167 strings with 10413 characters,
-and the built_in function-call counts, 1454 in all, are:
-= -- 92
-> -- 28
+            2773 wiz_defined-function locations,
+            607 strings with 5241 characters,
+and the built_in function-call counts, 1229 in all, are:
+= -- 102
+> -- 40
 < -- 4
 + -- 17
-- -- 8
-* -- 150
-:= -- 213
-add.period$ -- 4
+- -- 12
+* -- 68
+:= -- 188
+add.period$ -- 12
 call.type$ -- 4
-change.case$ -- 20
+change.case$ -- 16
 chr.to.int$ -- 3
-cite$ -- 4
-duplicate$ -- 132
-empty$ -- 133
-format.name$ -- 20
-if$ -- 257
+cite$ -- 12
+duplicate$ -- 60
+empty$ -- 129
+format.name$ -- 16
+if$ -- 255
 int.to.chr$ -- 2
-int.to.str$ -- 5
-missing$ -- 16
-newline$ -- 27
-num.names$ -- 12
-pop$ -- 48
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 28
+num.names$ -- 16
+pop$ -- 50
 preamble$ -- 1
-purify$ -- 16
+purify$ -- 12
 quote$ -- 0
-skip$ -- 50
+skip$ -- 54
 stack$ -- 0
-substring$ -- 44
-swap$ -- 62
+substring$ -- 8
+swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
-warning$ -- 0
-while$ -- 8
+type$ -- 44
+warning$ -- 4
+while$ -- 12
 width$ -- 0
-write$ -- 50
-(There were 4 warnings)
+write$ -- 53
+(There were 8 warnings)

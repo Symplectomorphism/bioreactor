@@ -350,6 +350,10 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/scalerel/scalerel.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/soul/soul.sty
+INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/soul/soul.sty
+INPUT /usr/local/texlive/2022/texmf-dist/tex/generic/soul/soul.sty
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
@@ -546,8 +550,8 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
-INPUT /home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
 INPUT /usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
 INPUT /home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
 INPUT /home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
 INPUT ./contents/results.tex
@@ -570,6 +574,8 @@ INPUT ./contents/acknowledgment.tex
 INPUT ./contents/acknowledgment.tex
 INPUT ./root.bbl
 INPUT ./root.bbl
+INPUT ./contents/appendices.tex
+INPUT ./contents/appendices.tex
 INPUT ./root.aux
 INPUT ./root.out
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb

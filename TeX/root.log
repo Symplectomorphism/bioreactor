@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.29)  9 APR 2023 01:14
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.29)  9 APR 2023 14:48
  restricted system commands enabled.
  file:line:error style messages enabled.
 **root.tex
@@ -607,38 +607,49 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \mnxsrwidth=\skip73
 \LMex=\skip74
 \LMpt=\skip75
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks46
+\SOUL@lasttoken=\toks47
+\SOUL@cmds=\toks48
+\SOUL@buffer=\toks49
+\SOUL@token=\toks50
+\SOUL@spaceskip=\skip76
+\SOUL@ttwidth=\dimen300
+\SOUL@uldp=\dimen301
+\SOUL@ulht=\dimen302
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
 \c@subfigure=\count327
 \c@subtable=\count328
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen300
-\TX@old@table=\dimen301
-\TX@old@col=\dimen302
-\TX@target=\dimen303
-\TX@delta=\dimen304
+\TX@col@width=\dimen303
+\TX@old@table=\dimen304
+\TX@old@col=\dimen305
+\TX@target=\dimen306
+\TX@delta=\dimen307
 \TX@cols=\count329
-\TX@ftn=\toks46
+\TX@ftn=\toks51
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2022-12-17 L3 Experimental document command parser
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2022-12-17 L3 Experimental prototype document functions
-\l__xtemplate_tmp_dim=\dimen305
+\l__xtemplate_tmp_dim=\dimen308
 \l__xtemplate_tmp_int=\count330
 \l__xtemplate_tmp_muskip=\muskip18
-\l__xtemplate_tmp_skip=\skip76
+\l__xtemplate_tmp_skip=\skip77
 )
 Package: xfrac 2022-12-17 L3 Experimental split-level fractions
 \l__xfrac_slash_box=\box84
 \l__xfrac_tmp_box=\box85
-\l__xfrac_denominator_bot_sep_dim=\dimen306
-\l__xfrac_numerator_bot_sep_dim=\dimen307
-\l__xfrac_numerator_top_sep_dim=\dimen308
-\l__xfrac_slash_left_sep_dim=\dimen309
-\l__xfrac_slash_right_sep_dim=\dimen310
+\l__xfrac_denominator_bot_sep_dim=\dimen309
+\l__xfrac_numerator_bot_sep_dim=\dimen310
+\l__xfrac_numerator_top_sep_dim=\dimen311
+\l__xfrac_slash_left_sep_dim=\dimen312
+\l__xfrac_slash_right_sep_dim=\dimen313
 \l__xfrac_slash_left_muskip=\muskip19
 \l__xfrac_slash_right_muskip=\muskip20
 
@@ -647,8 +658,8 @@ Package xtemplate Info: Declaring object type 'xfrac' taking 3 argument(s) on
 
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks47
-\verbatim@line=\toks48
+\every@verbatim=\toks52
+\verbatim@line=\toks53
 \verbatim@in@stream=\read3
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2022-11-13 v7.00u Hypertext links for LaTeX
@@ -669,7 +680,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count331
 )
-\@linkdim=\dimen311
+\@linkdim=\dimen314
 \Hy@linkcounter=\count332
 \Hy@pagecounter=\count333
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
@@ -693,15 +704,15 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4410.
 \c@Hy@tempcnt=\count335
 LaTeX Info: Redefining \url on input line 4748.
-\XeTeXLinkMargin=\dimen312
+\XeTeXLinkMargin=\dimen315
  (/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count336
-\Field@Width=\dimen313
-\Fld@charsize=\dimen314
+\Field@Width=\dimen316
+\Fld@charsize=\dimen317
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -722,29 +733,29 @@ Package hyperref Info: Driver (autodetected): hluatex.
 File: hluatex.def 2022-11-13 v7.00u Hyperref driver for luaTeX
  (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
 \Fld@listcount=\count340
 \c@bookmark@seq@number=\count341
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip77
+\Hy@SectionHShift=\skip78
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2021/06/04 v1.1.5 Todonotes source and documentation.
 Package: todonotes 2021/06/04
  (/usr/local/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks49
-\XKV@tempa@toks=\toks50
+\XKV@toks=\toks54
+\XKV@tempa@toks=\toks55
 )
 \XKV@depth=\count342
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -762,20 +773,20 @@ File: tikzlibraryquotes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\arrowsize=\dimen315
+\arrowsize=\dimen318
 )) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
 File: tikzlibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
 File: pgflibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen316
-\pgfdecoratedremainingdistance=\dimen317
-\pgfdecoratedinputsegmentcompleteddistance=\dimen318
-\pgfdecoratedinputsegmentremainingdistance=\dimen319
-\pgf@decorate@distancetomove=\dimen320
+\pgfdecoratedcompleteddistance=\dimen319
+\pgfdecoratedremainingdistance=\dimen320
+\pgfdecoratedinputsegmentcompleteddistance=\dimen321
+\pgfdecoratedinputsegmentremainingdistance=\dimen322
+\pgf@decorate@distancetomove=\dimen323
 \pgf@decorate@repeatstate=\count346
-\pgfdecorationsegmentamplitude=\dimen321
-\pgfdecorationsegmentlength=\dimen322
+\pgfdecorationsegmentamplitude=\dimen324
+\pgfdecorationsegmentlength=\dimen325
 )
 \tikz@lib@dec@box=\box86
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex))
@@ -819,16 +830,16 @@ Class revtex4 Info: multicol was not loaded (OK!) on input line 56.
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count352
-\scratchdimen=\dimen323
+\scratchdimen=\dimen326
 \scratchbox=\box87
 \nofMPsegments=\count353
 \nofMParguments=\count354
-\everyMPshowfont=\toks51
+\everyMPshowfont=\toks56
 \MPscratchCnt=\count355
-\MPscratchDim=\dimen324
+\MPscratchDim=\dimen327
 \MPnumerator=\count356
 \makeMPintoPDFobject=\count357
-\everyMPtoPDFconversion=\toks52
+\everyMPtoPDFconversion=\toks57
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
@@ -848,55 +859,59 @@ Package hyperref Info: Link coloring ON on input line 56.
 
 \openout4 = root.out
  (./contents/title.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)) (./contents/introduction.tex) (./contents/analysis.tex [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./contents/results.tex [2]
-<./figures/circuit.png, id=115, 2569.6pt x 761.84625pt>
+)) (./contents/introduction.tex) (./contents/analysis.tex [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./contents/results.tex
+<./figures/circuit.png, id=114, 2569.6pt x 761.84625pt>
 File: ./figures/circuit.png Graphic file (type png)
 <use ./figures/circuit.png>
-Package luatex.def Info: ./figures/circuit.png  used on input line 27.
+Package luatex.def Info: ./figures/circuit.png  used on input line 28.
 (luatex.def)             Requested size: 227.62204pt x 67.48209pt.
 
-Underfull \hbox (badness 1019) in paragraph at lines 32--40
+Underfull \hbox (badness 1019) in paragraph at lines 33--41
 []\TU/lmr/m/n/10 The sim-u-la-tion gen-er-ates the rel-e-vant volt-age re-
  []
 
-<./figures/pwm_filtered_one_two_final_signal.png, id=117, 2565.585pt x 1311.90125pt>
+[2]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 41.
+
+<./figures/pwm_filtered_one_two_final_signal.png, id=132, 2565.585pt x 1311.90125pt>
 File: ./figures/pwm_filtered_one_two_final_signal.png Graphic file (type png)
 <use ./figures/pwm_filtered_one_two_final_signal.png>
-Package luatex.def Info: ./figures/pwm_filtered_one_two_final_signal.png  used on input line 42.
+Package luatex.def Info: ./figures/pwm_filtered_one_two_final_signal.png  used on input line 43.
 (luatex.def)             Requested size: 255.0pt x 130.37708pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 42--43
+Overfull \hbox (9.0pt too wide) in paragraph at lines 43--44
  [][] 
  []
 
-<./figures/sallenkey.png, id=120, 2572.61125pt x 1331.97626pt>
+<./figures/sallenkey.png, id=137, 2572.61125pt x 1331.97626pt>
 File: ./figures/sallenkey.png Graphic file (type png)
 <use ./figures/sallenkey.png>
-Package luatex.def Info: ./figures/sallenkey.png  used on input line 54.
+Package luatex.def Info: ./figures/sallenkey.png  used on input line 58.
 (luatex.def)             Requested size: 255.0pt x 132.02661pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 54--55
+Overfull \hbox (9.0pt too wide) in paragraph at lines 58--59
  [][] 
  []
 
-<./figures/output_osc.jpg, id=122, 803.0pt x 481.8pt>
+<./figures/output_osc.jpg, id=139, 803.0pt x 481.8pt>
 File: ./figures/output_osc.jpg Graphic file (type jpg)
 <use ./figures/output_osc.jpg>
-Package luatex.def Info: ./figures/output_osc.jpg  used on input line 75.
+Package luatex.def Info: ./figures/output_osc.jpg  used on input line 79.
 (luatex.def)             Requested size: 255.0pt x 152.99553pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 75--76
+Overfull \hbox (9.0pt too wide) in paragraph at lines 79--80
  [][] 
  []
 
@@ -904,64 +919,64 @@ Overfull \hbox (9.0pt too wide) in paragraph at lines 75--76
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./contents/conclusion.tex) (./contents/acknowledgment.tex) (./root.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
- []\TU/lmr/m/n/9 Physik In-stru-mente, \TU/lmr/m/it/9 E-610\TU/lmr/m/n/9 , URL
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+ []\TU/lmr/m/n/9 Ana-log De-vices.  LT-Spice, .  URL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+ [][]$\TU/lmtt/m/n/9 https://www.analog.com/en/design-[]center/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+ \TU/lmtt/m/n/9 design-[]tools-[]and-[]calculators/ltspice-[]simulator.
+ []
+
+[3<./figures/circuit.png><./figures/pwm_filtered_one_two_final_signal.png><./figures/sallenkey.png><./figures/output_osc.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+ []\TU/lmr/m/n/9 Physik In-stru-mente.  E-610.  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
  [][]$\TU/lmtt/m/n/9 https://www.physikinstrumente.com/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
  \TU/lmtt/m/n/9 en/products/controllers-[]and-[]drivers/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--19
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
  \TU/lmtt/m/n/9 nanopositioning-[]piezo-[]controllers/
  []
 
+) (./contents/appendices.tex
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
- []\TU/lmr/m/n/9 Ana-log De-vices, \TU/lmr/m/it/9 LT-Spice\TU/lmr/m/n/9 , URL [][]$\TU/lmtt/m/n/9 https:
- []
+Class revtex4 Warning: Float cannot be placed.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
- \TU/lmtt/m/n/9 //www.analog.com/en/design-[]center/
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
- \TU/lmtt/m/n/9 design-[]tools-[]and-[]calculators/ltspice-[]simulator.
- []
-
-[3<./figures/circuit.png><./figures/pwm_filtered_one_two_final_signal.png><./figures/sallenkey.png>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 32.
-
-) [4<./figures/output_osc.jpg>] (./root.aux)
+) [4] [5] (./root.aux)
 Package rerunfilecheck Info: File `root.out' has not changed.
-(rerunfilecheck)             Checksum: 412F693E3D73F75667D712839520243F;1478.
+(rerunfilecheck)             Checksum: E4A362D24615A38ED5C4E785DE031DAF;1742.
 )
 
 Here is how much of LuaTeX's memory you used:
- 49920 strings out of 478384
- 195355,1977958 words of node,token memory allocated
- 2555 words of node memory still in use:
-   69 hlist, 9 vlist, 8 rule, 10 math, 43 glue, 38 kern, 92 glyph, 48 attribute, 60 glue_spec, 48 attribute_list, 3 pdf_action nodes
-   avail lists: 1:10,2:6802,3:3474,4:132,5:986,6:106,7:18458,8:165,9:2128,10:16,11:948
- 68597 multiletter control sequences out of 65536+600000
- 79 fonts using 5491967 bytes
- 119i,16n,114p,481b,1272s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
+ 50407 strings out of 478384
+ 195360,1977958 words of node,token memory allocated
+ 2566 words of node memory still in use:
+   69 hlist, 9 vlist, 8 rule, 10 math, 43 glue, 38 kern, 93 glyph, 49 attribute, 60 glue_spec, 49 attribute_list, 3 pdf_action nodes
+   avail lists: 1:11,2:6134,3:4635,4:120,5:716,6:88,7:17304,8:148,9:2541,10:17,11:976
+ 69063 multiletter control sequences out of 65536+600000
+ 80 fonts using 5574831 bytes
+ 119i,16n,114p,481b,1345s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on root.pdf (4 pages, 562145 bytes).
+Output written on root.pdf (5 pages, 568336 bytes).
 
-PDF statistics: 288 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 33 named destinations out of 1000 (max. 131072)
- 104 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 305 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
+ 36 named destinations out of 1000 (max. 131072)
+ 112 words of extra memory for PDF output out of 10000 (max. 100000000)
 

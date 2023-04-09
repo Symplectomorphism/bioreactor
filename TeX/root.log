@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.29)  9 APR 2023 00:27
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.29)  9 APR 2023 00:58
  restricted system commands enabled.
  file:line:error style messages enabled.
 **root.tex
@@ -859,8 +859,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)) (./contents/introduction.tex) (./contents/analysis.tex [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./contents/results.tex
-<./figures/circuit.png, id=100, 2569.6pt x 761.84625pt>
+)) (./contents/introduction.tex) (./contents/analysis.tex [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./contents/results.tex [2]
+<./figures/circuit.png, id=118, 2569.6pt x 761.84625pt>
 File: ./figures/circuit.png Graphic file (type png)
 <use ./figures/circuit.png>
 Package luatex.def Info: ./figures/circuit.png  used on input line 27.
@@ -870,11 +870,7 @@ Underfull \hbox (badness 1019) in paragraph at lines 32--40
 []\TU/lmr/m/n/10 The sim-u-la-tion gen-er-ates the rel-e-vant volt-age re-
  []
 
-[2]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 40.
-
-<./figures/pwm_filtered_one_two_final_signal.png, id=123, 2565.585pt x 1311.90125pt>
+<./figures/pwm_filtered_one_two_final_signal.png, id=120, 2565.585pt x 1311.90125pt>
 File: ./figures/pwm_filtered_one_two_final_signal.png Graphic file (type png)
 <use ./figures/pwm_filtered_one_two_final_signal.png>
 Package luatex.def Info: ./figures/pwm_filtered_one_two_final_signal.png  used on input line 42.
@@ -884,7 +880,7 @@ Overfull \hbox (9.0pt too wide) in paragraph at lines 42--43
  [][] 
  []
 
-<./figures/sallenkey.png, id=126, 2572.61125pt x 1331.97626pt>
+<./figures/sallenkey.png, id=123, 2572.61125pt x 1331.97626pt>
 File: ./figures/sallenkey.png Graphic file (type png)
 <use ./figures/sallenkey.png>
 Package luatex.def Info: ./figures/sallenkey.png  used on input line 54.
@@ -894,7 +890,7 @@ Overfull \hbox (9.0pt too wide) in paragraph at lines 54--55
  [][] 
  []
 
-<./figures/output_osc.jpg, id=128, 803.0pt x 481.8pt>
+<./figures/output_osc.jpg, id=125, 803.0pt x 481.8pt>
 File: ./figures/output_osc.jpg Graphic file (type jpg)
 <use ./figures/output_osc.jpg>
 Package luatex.def Info: ./figures/output_osc.jpg  used on input line 75.
@@ -942,26 +938,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--32
  \TU/lmtt/m/n/9 design-[]tools-[]and-[]calculators/ltspice-[]simulator.
  []
 
-) [3<./figures/circuit.png><./figures/pwm_filtered_one_two_final_signal.png><./figures/sallenkey.png><./figures/output_osc.jpg>] (./root.aux)
+[3<./figures/circuit.png><./figures/pwm_filtered_one_two_final_signal.png><./figures/sallenkey.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 32.
+
+) [4<./figures/output_osc.jpg>] (./root.aux)
 Package rerunfilecheck Info: File `root.out' has not changed.
 (rerunfilecheck)             Checksum: 412F693E3D73F75667D712839520243F;1478.
 )
 
 Here is how much of LuaTeX's memory you used:
- 49911 strings out of 478384
+ 49921 strings out of 478384
  195353,1977958 words of node,token memory allocated
- 2633 words of node memory still in use:
-   73 hlist, 10 vlist, 9 rule, 12 math, 44 glue, 39 kern, 92 glyph, 46 attribute, 60 glue_spec, 46 attribute_list, 4 pdf_action nodes
-   avail lists: 1:10,2:6788,3:3497,4:96,5:985,6:89,7:18534,8:157,9:1995,10:16,11:913
- 68590 multiletter control sequences out of 65536+600000
+ 2565 words of node memory still in use:
+   69 hlist, 9 vlist, 8 rule, 10 math, 43 glue, 38 kern, 92 glyph, 49 attribute, 60 glue_spec, 49 attribute_list, 4 pdf_action nodes
+   avail lists: 1:10,2:6794,3:3465,4:132,5:986,6:106,7:18537,8:165,9:2119,10:16,11:948
+ 68598 multiletter control sequences out of 65536+600000
  80 fonts using 5618119 bytes
  119i,16n,114p,481b,1272s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on root.pdf (3 pages, 553800 bytes).
+</usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on root.pdf (4 pages, 565254 bytes).
 
-PDF statistics: 285 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 31 named destinations out of 1000 (max. 131072)
+PDF statistics: 297 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
+ 33 named destinations out of 1000 (max. 131072)
  104 words of extra memory for PDF output out of 10000 (max. 100000000)
 

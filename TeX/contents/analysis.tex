@@ -125,11 +125,11 @@ Our desired signal is a $90$\unit{\hertz} sinusoidal. We do not want to lose
 this signal, i.e., we want our transfer function $H(s)$ to approximately have a
 unity gain at this frequency. We set $2\pi RC \leq \nicefrac{1}{900}$ or $RC
 \leq 1.768 \times 10^{-4}$\unit{\ohm\farad} to satisfy this requirement. Using
-some standard values of the resistance $R = 1$\unit{\kilo\ohm} and the
-capacitance $C = 104$\unit{\nano\farad}, we obtain $RC = 1.04 \times 10^{-4}$,
-achieving the desired goal. The attenuation at Teensy's PWM carrier frequency of
-$36.6$\unit{\kilo\hertz} is found by \[ 20 \log_{10}\left\{\abs{H(j 2\pi
-36600)}\right\} = -55.163\,\unit{\decibel}. \]
+some standard values of the resistance $R = 47$\unit{\kilo\ohm} and the
+capacitance $C = 1$\unit{\nano\farad}, we obtain $RC = 4.7 \times
+10^{-5}$\unit{\ohm\farad}, meeting the specification. The attenuation at
+Teensy's PWM carrier frequency of $36.6$\unit{\kilo\hertz} is found by \[ 20
+\log_{10}\left\{\abs{H(j 2\pi 36600)}\right\} = -55.163\,\unit{\decibel}. \]
 
 Lastly, we want to amplify the input voltage $v_i$ thrice in order to hit the
 $0-10$\unit{\volt} mark. The gain of the non-inverting amplifier is $k = 1 +
@@ -207,8 +207,9 @@ $90$\unit{\hertz}.
 \vspace{-1em}
 
 Another well-known architecture that works well for this sort of problem is the
-Sallen-Key low-pass filter. This setup replaces the two $RC$+op-amp combination
-whose output enters the amplifier as depicted in Figure~\ref{fig:sallenkey}.
+Sallen-Key low-pass filter. This setup replaces the two $RC$+buffer combination
+whose output enters the amplifier op-amp, as shown in
+Figure~\ref{fig:sallenkey}.
 
 \begin{figure}[h]
 \begin{circuitikz}[scale=1]\draw

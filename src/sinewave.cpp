@@ -17,7 +17,7 @@
 
 // Pin 13 has the LED on Teensy 3.1 - will use this pin also as the square wave TTL output
 int ledpin = 13;
-int pwmpin = 37;
+int pwmpin = 28;
 
 volatile int i = 0;
 
@@ -25,7 +25,7 @@ FASTRUN void timer0_callback() {
     /*
      * Change the amplitude here.
      */
-    int ampl = (int)(0.75*waveformsTable[i]);
+    int ampl = (int)(0.9*waveformsTable[i]);
     analogWrite(pwmpin, ampl);  // write the selected waveform on DAC
     // Serial.print(ampl);
     
@@ -48,8 +48,8 @@ FASTRUN void timer0_callback() {
      * 1e6/freq/512
      *
      * */
-    // delayMicroseconds(21); // to slow it down a bit if required 3 us to 16383 us
-    delayMicroseconds(200); // Can't see the light flickering if faster.
+    delayMicroseconds(21); // to slow it down a bit if required 3 us to 16383 us
+    // delayMicroseconds(200); // Can't see the light flickering if faster.
 }
 
 // the setup routine runs once when you press reset:

@@ -106,8 +106,12 @@ We start by analyzing how the input voltage, $v_i$, to the non-inverting
 amplifier, responds to Teensy-generated PWM voltage, $v_t$. This is a
 $0-3.3$\unit{\volt} PWM signal to be filtered to extract the modulated sine
 wave. Thanks to the buffer op-amp, the transfer function from the Teensy input
-$v_t$ to the input $v_i$ to the non-inverting amplifier op-amp is given by \[
-\frac{V_i(s)}{V_t(s)} = H(s) = \frac{1}{R^2C^2s^2+2RCs+1}.\]
+$v_t$ to the input $v_i$ to the non-inverting amplifier op-amp is given by
+%
+\begin{equation}
+\frac{V_i(s)}{V_t(s)} = H(s) = \frac{1}{R^2C^2s^2+2RCs+1}.
+\label{eq:tf}
+\end{equation}
 %
 This is a fully-damped transfer function with poles at $s_{1,2} =
 -\nicefrac{1}{RC}$. In other words, the cut-off frequency of this filter is at
@@ -203,12 +207,13 @@ $90$\unit{\hertz}.
 \vspace{-1em}
 
 Another well-known architecture that works well for this sort of problem is the
-Sallen-Key low-pass filter as shown in Figure~\ref{fig:sallenkey}.
+Sallen-Key low-pass filter. This setup replaces the two $RC$+op-amp combination
+whose output enters the amplifier as depicted in Figure~\ref{fig:sallenkey}.
 
 \begin{figure}[h]
 \begin{circuitikz}[scale=1]\draw
 (5,.5) node [op amp] (opamp) {}
-(0,0) node [left] {$v_f$} to [R, l=$R_d$, o-*] (2,0)
+(0,0) node [left] {$v_t$} to [R, l=$R_d$, o-*] (2,0)
 to [R, l=$R_d$, *-*] (opamp.+)
 to [C, l_=$C_{d}$, *-] ($(opamp.+)+(0,-2)$) node [ground] {}
 (opamp.out) |- (3.5,2) to [C, l_=$C_{d}$, *-] (2,2) to [short] (2,0)
@@ -220,8 +225,12 @@ to [C, l_=$C_{d}$, *-] ($(opamp.+)+(0,-2)$) node [ground] {}
 \end{figure}
 
 The cut-off frequency of this design is given by the same expression as in
-Section~\ref{ssec:second}. Simulation shows that some good values for the
-resistances $R_d$ and the capacitances $C_d$ are $R_d = 68$\unit{\kilo\ohm} and
-$C_d = 1$\unit{\nano\farad}, with a cutoff frequency of $f \approx
-2340$\unit{\hertz}. Even $R_d = 100$\unit{\kilo\ohm} works well with $C_d =
-1$\unit{\nano\farad} with a cutoff frequency at $f \approx 1591$\unit{\hertz}.
+equation~\eqref{eq:tf} of Section~\ref{ssec:second}. Both theory and simulation
+shows that some good values for the resistances $R_d$ and the capacitances $C_d$
+are $R_d = 47$\unit{\kilo\ohm} and $C_d = 1$\unit{\nano\farad}, with a cutoff
+frequency of $f \approx 3386$\unit{\hertz}. There is a range of resistance and
+capacitance values that work well around these nominal values.
+
+\begin{rem}
+    This is the filter to be implemented in the final design.
+\end{rem}

@@ -35,8 +35,8 @@ modulating a sine-wave at $90$\unit{\hertz} frequency. The individual plots in
 the middle show the output of the first (cyan) and the second (purple) RC
 low-pass filters ($v_f$ and $v_i$, respectively) that extract the modulated
 signal from its PWM representation. Finally, the last plot shows the amplified
-signal (gain: $3$) through the op-amp \texttt{OP292}. This signal is ready to be
-sent to the PI controller.
+signal ($\text{gain}=3$) through the op-amp \texttt{OP292}. This signal is ready
+to be sent to the PI controller.
 
 \begin{figure}[t]
 \includegraphics[width=0.5\textwidth]{./figures/pwm_filtered_one_two_final_signal.png}
@@ -53,7 +53,7 @@ were taken to be $R_d = 68$\unit{\kilo\ohm} and capacitances to be $C_d =
 \begin{figure}[t]
 \includegraphics[width=0.5\textwidth]{./figures/sallenkey.png}
 \caption{The response of the Sallen-Key architecture.}
-\label{fig:sallankey_sim}
+\label{fig:sallenkey_sim}
 \end{figure}
 
 
@@ -63,13 +63,22 @@ were taken to be $R_d = 68$\unit{\kilo\ohm} and capacitances to be $C_d =
 
 The design is implemented on a simple setup on my table top by lighting two red
 LEDs, first one using the filtered PWM and the second using the amplified
-signal, both obtained using the circuit in Section~\ref{ssec:second}.
+signal, both obtained using the circuit in Section~\ref{ssec:sallenkey}.
 
-\begin{figure}[t]
-\includegraphics[width=0.5\textwidth]{./figures/prototype.jpg}
-\caption{Prototype working on a LED} 
-\label{fig:exp}
+% \begin{figure}[t]
+% \includegraphics[width=0.5\textwidth]{./figures/prototype.jpg}
+% \caption{Prototype working on a LED} 
+% \label{fig:exp}
+% \end{figure}
+
+\begin{figure}[h]
+    \includegraphics[width=0.5\textwidth]{./figures/output_osc.jpg}
+    \caption{The response of the second-order Sallen-Key filter}
+    \label{fig:sallenkey_osc}
 \end{figure}
 
-We will perform a final verification on the real piezoelectric system early next
-week, recording the input signal properly using an oscilloscope.
+Figure~\ref{fig:sallenkey_osc} shows the response of the second-order Sallen-Key
+LPF observed through an oscilloscope. This is the output of the signal generator
+in response to the Teensy generated $90$\unit{\hertz} $0-3.3$\unit{\volt} PWM
+signal modulating the desired sine wave. This response is satisfactory and
+should drive the PI controller without any issues.

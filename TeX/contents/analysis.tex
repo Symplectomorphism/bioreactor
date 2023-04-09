@@ -1,9 +1,9 @@
 \section{Theoretical Analysis}
 \vspace{-1em}
 
-We perform basic PWM filter design to generate the driving $0-10$\unit{\volt}
-sine wave for the Physik Instrumente (PI)'s piezoelectric
-actuator~\cite{pie610}.
+We perform a basic PWM filter design to generate the driving $0-10$\unit{\volt}
+sine wave signal to be fed into the Physik Instrumente (PI)'s controller for one
+of their piezoelectric actuators~\cite{pie610}.
 
 \vspace{-1em}
 \subsection{Basic Lowpass Filter Design}
@@ -11,25 +11,24 @@ actuator~\cite{pie610}.
 
 Consider the first-order filter sketched in Figure~\ref{fig:RC} with a
 sinusoidal driving voltage. The current $i$ over the capacitor is $i =
-C\frac{\dd v_o}{\dd t}$. KVL around the circuit gives 
+C\frac{\dd v_o}{\dd t}$. KVL around the loop gives 
 %
-\begin{equation}
+\begin{equation*}
     RC\frac{\dd v_o}{\dd t} + v_o = v_{\text{sig}} = A \cos{(\omega t)}
-    \label{eq:de}
-\end{equation} 
+%     \label{eq:de}
+\end{equation*} 
 %
-This differential equation has the transfer function \[ G(s) = \frac{1}
-{RCs+1}. \] The steady-state solution of the differential equation~\eqref{eq:de}
-is obtained as
+This differential equation has the transfer function \[ G(s) = \frac{1} {RCs+1}.
+\] The steady-state solution of the differential equation is obtained as
 %
-\begin{align}
+\begin{align*}
     \begin{split}
     v_o(t) &= A\abs{G(j \omega)}\cos{(\omega t + \angle G(j\omega))} \\
            &= \frac{A}{\sqrt{1+\omega^2R^2C^2}}\cos{\left(\omega t -
            \arctan{(\omega R C})\right)}
     \end{split}
-    \label{eq:de_sol}
-\end{align}
+%    \label{eq:de_sol}
+\end{align*}
 %
 Since we do not want our signal to be attenuated by the low-pass filter, we must
 choose the values of $R$ and $C$ such that $\omega R C \ll 1$ or $2\pi RC \ll
@@ -58,11 +57,13 @@ leading us to design a second-order low-pass filter in the next subsections.
 \label{ssec:second}
 \vspace{-1em}
 
-The second-order filter is implemented in the first part of the circuit
-presented in Figure~\ref{fig:sig_circuit}. The second part of this circuit
-amplifies the sine wave extracted from its PWM modulation from
-$0-3.3$\unit{\volt} to $0-10$\unit{\volt}. We analyze the circuit so as to
-figure out the values of the various resistances and capacitances.
+A second-order filter is implemented as a linear operator from the
+Teensy-generated PWM voltage input $v_t$ to the voltage $v_i$, as presented in
+Figure~\ref{fig:sig_circuit}. The remainder of this circuit constitutes a
+noninverting op-amp that amplifies the sine wave extracted from its PWM
+modulation from $0-3.3$\unit{\volt} to $0-10$\unit{\volt}. We analyze the
+circuit so as to figure out the values of the various resistances and
+capacitances.
 
 \begin{figure}[h]
 \begin{center}
@@ -108,11 +109,9 @@ figure out the values of the various resistances and capacitances.
 \end{figure}
 
 
-We start by analyzing how the input voltage, $v_i$, to the non-inverting
-amplifier, responds to Teensy-generated PWM voltage, $v_t$. This is a
-$0-3.3$\unit{\volt} PWM signal to be filtered to extract the modulated sine
-wave. Thanks to the buffer op-amp, the transfer function from the Teensy input
-$v_t$ to the input $v_i$ to the non-inverting amplifier op-amp is given by
+The $0-3.3$\unit{\volt} PWM signal is to be filtered to extract the modulated
+sine wave. Thanks to the buffer op-amp, the transfer function from the Teensy
+input $v_t$ to the input $v_i$ to the non-inverting amplifier op-amp is given by
 %
 \begin{equation}
 H(s) = \frac{V_i(s)}{V_t(s)} = \frac{1}{R^2C^2s^2+2RCs+1}.
@@ -135,7 +134,7 @@ some standard values of the resistance $R = 47$\unit{\kilo\ohm} and the
 capacitance $C = 1$\unit{\nano\farad}, we obtain $RC = 4.7 \times
 10^{-5}$\unit{\ohm\farad}, meeting the specification. The attenuation at
 Teensy's PWM carrier frequency of $36.6$\unit{\kilo\hertz} is found by \[ 20
-\log_{10}\left\{\abs{H(j 2\pi 36600)}\right\} = -55.163\,\unit{\decibel}. \]
+\log_{10}\left\{\abs{H(j 2\pi 36600)}\right\} = -41.424\,\unit{\decibel}. \]
 
 Lastly, we want to amplify the input voltage $v_i$ thrice in order to hit the
 $0-10$\unit{\volt} mark. The gain of the non-inverting amplifier is $k = 1 +
@@ -257,7 +256,7 @@ the first and third equations, this yields
 %
 We will take $R_{d1} = R_{d2} = R_d$ and $C_{d1} = C_{d2} = C_d$ so that the
 transfer function for this linear differential equation is observed to coincide
-with that of equation~\eqref{eq:tf} of Section~\ref{ssec:second}: \[ H(s) =
+with equation~\eqref{eq:tf} of Section~\ref{ssec:second}: \[ H(s) =
 \frac{V_i(s)}{V_t(s)} = \frac{1}{R_d^2C_d^2s^2 + 2R_dC_ds + 1}.\]
 %
 Therefore, all the analysis that follows equation~\eqref{eq:tf} goes through for

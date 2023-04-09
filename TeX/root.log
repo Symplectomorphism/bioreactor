@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.29)  9 APR 2023 15:27
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.29)  9 APR 2023 15:58
  restricted system commands enabled.
  file:line:error style messages enabled.
 **root.tex
@@ -871,54 +871,46 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )) (./contents/introduction.tex) (./contents/analysis.tex [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./contents/results.tex
-<./figures/circuit.png, id=114, 2569.6pt x 761.84625pt>
+<./figures/circuit.png, id=113, 2569.6pt x 761.84625pt>
 File: ./figures/circuit.png Graphic file (type png)
 <use ./figures/circuit.png>
-Package luatex.def Info: ./figures/circuit.png  used on input line 28.
+Package luatex.def Info: ./figures/circuit.png  used on input line 29.
 (luatex.def)             Requested size: 227.62204pt x 67.48209pt.
+ [2]
 
-Underfull \hbox (badness 1019) in paragraph at lines 33--41
-[]\TU/lmr/m/n/10 The sim-u-la-tion gen-er-ates the rel-e-vant volt-age re-
- []
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 42.
 
-[2]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 41.
-
-<./figures/pwm_filtered_one_two_final_signal.png, id=132, 2565.585pt x 1311.90125pt>
+<./figures/pwm_filtered_one_two_final_signal.png, id=131, 2565.585pt x 1311.90125pt>
 File: ./figures/pwm_filtered_one_two_final_signal.png Graphic file (type png)
 <use ./figures/pwm_filtered_one_two_final_signal.png>
-Package luatex.def Info: ./figures/pwm_filtered_one_two_final_signal.png  used on input line 43.
+Package luatex.def Info: ./figures/pwm_filtered_one_two_final_signal.png  used on input line 44.
 (luatex.def)             Requested size: 255.0pt x 130.37708pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 43--44
+Overfull \hbox (9.0pt too wide) in paragraph at lines 44--45
  [][] 
  []
 
-<./figures/sallenkey.png, id=137, 2572.61125pt x 1331.97626pt>
+<./figures/sallenkey.png, id=136, 2572.61125pt x 1331.97626pt>
 File: ./figures/sallenkey.png Graphic file (type png)
 <use ./figures/sallenkey.png>
-Package luatex.def Info: ./figures/sallenkey.png  used on input line 58.
+Package luatex.def Info: ./figures/sallenkey.png  used on input line 59.
 (luatex.def)             Requested size: 255.0pt x 132.02661pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 58--59
+Overfull \hbox (9.0pt too wide) in paragraph at lines 59--60
  [][] 
  []
 
-<./figures/output_osc.jpg, id=139, 803.0pt x 481.8pt>
+<./figures/output_osc.jpg, id=137, 803.0pt x 481.8pt>
 File: ./figures/output_osc.jpg Graphic file (type jpg)
 <use ./figures/output_osc.jpg>
-Package luatex.def Info: ./figures/output_osc.jpg  used on input line 79.
+Package luatex.def Info: ./figures/output_osc.jpg  used on input line 78.
 (luatex.def)             Requested size: 255.0pt x 152.99553pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 79--80
+Overfull \hbox (9.0pt too wide) in paragraph at lines 78--79
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./contents/conclusion.tex) (./contents/acknowledgment.tex) (./root.bbl
+) (./contents/conclusion.tex) (./contents/acknowledgment.tex) (./root.bbl [3<./figures/circuit.png><./figures/pwm_filtered_one_two_final_signal.png><./figures/sallenkey.png><./figures/output_osc.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 9--13
  []\TU/lmr/m/n/9 Ana-log De-vices.  LT-Spice, .  URL
  []
@@ -933,7 +925,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--13
  \TU/lmtt/m/n/9 design-[]tools-[]and-[]calculators/ltspice-[]simulator.
  []
 
-[3<./figures/circuit.png><./figures/pwm_filtered_one_two_final_signal.png><./figures/sallenkey.png><./figures/output_osc.jpg>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 20--24
  []\TU/lmr/m/n/9 Physik In-stru-mente.  E-610.  URL
  []
@@ -963,20 +955,20 @@ Package rerunfilecheck Info: File `root.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 50407 strings out of 478384
+ 50404 strings out of 478384
  195353,1977958 words of node,token memory allocated
- 2566 words of node memory still in use:
-   69 hlist, 9 vlist, 8 rule, 10 math, 43 glue, 38 kern, 93 glyph, 49 attribute, 60 glue_spec, 49 attribute_list, 3 pdf_action nodes
-   avail lists: 1:10,2:6134,3:4635,4:120,5:716,6:88,7:17382,8:148,9:2541,10:17,11:976
- 69063 multiletter control sequences out of 65536+600000
+ 2562 words of node memory still in use:
+   69 hlist, 9 vlist, 8 rule, 10 math, 43 glue, 38 kern, 93 glyph, 48 attribute, 60 glue_spec, 48 attribute_list, 3 pdf_action nodes
+   avail lists: 1:10,2:6096,3:4618,4:136,5:730,6:90,7:17130,8:150,9:2468,10:18,11:968
+ 69062 multiletter control sequences out of 65536+600000
  80 fonts using 5574831 bytes
  119i,16n,114p,481b,1345s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on root.pdf (5 pages, 568324 bytes).
+Output written on root.pdf (5 pages, 567884 bytes).
 
-PDF statistics: 305 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
- 36 named destinations out of 1000 (max. 131072)
+PDF statistics: 304 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
+ 34 named destinations out of 1000 (max. 131072)
  112 words of extra memory for PDF output out of 10000 (max. 100000000)
 

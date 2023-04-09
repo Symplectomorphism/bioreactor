@@ -4,8 +4,8 @@
 
 A sine wave is modulated using a $0-3.3$\unit{\volt} PWM output of a Teensy 4.1
 microcontroller at a carrier frequency of $36.6$\unit{\kilo\hertz}. We presented
-to second-order lowpass filters to extract the modulated signal from its PWM
+two second-order lowpass filters to extract the modulated signal from its PWM
 representation: (i) $RC$+buffer configuration, (ii) Sallen-Key architecture. We
-have shown that in simulation both perform similarly, however in experimentation
-the Sallen-Key filter performs significantly better. We have decided to use this
-filter in our final design on the bioreactor.
+have shown that in simulation both filters perform similarly, however in
+experiments the Sallen-Key filter performs significantly better. We have decided
+to use this filter in our final design on the bioreactor.

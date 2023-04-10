@@ -6,10 +6,6 @@
   Generates a Sine Wave with specified frequency at 12-bit resolution of DAC output
   Cycles through values in the Waveforms.h lookup file, which are created from 
   a python script and copied in manually
-
-  For our application, I'm using a 100 nF ceramic capacitor with 1kOhm resistor
-  in decoupling configuration.
-  
 */
 
 // include lookup table of sine values from waveforms.h

@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -28,7 +31,7 @@
 \newlabel{fig:sig_circuit}{{2}{1}{The signal generator circuit.\relax }{figure.caption.6}{}}
 \newlabel{eq:tf}{{1}{1}{}{equation.2.1}{}}
 \citation{ltspice}
-\citation{op292}
+\citation{lm358}
 \citation{teensy}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Sallen-Key Architecture}{2}{section*.7}\protected@file@percent }
 \newlabel{ssec:sallenkey}{{2.3}{2}{}{section*.7}{}}
@@ -38,27 +41,27 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3}Results}{2}{section*.9}\protected@file@percent }
 \newlabel{sec:results}{{3}{2}{}{section*.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Simulation}{2}{section*.10}\protected@file@percent }
+\bibdata{./bib/mechatronics}
+\bibcite{ltspice}{{1}{}{{Analog Devices}}{{}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The signal generator circuit in LTSpice\relax }}{3}{figure.caption.11}\protected@file@percent }
 \newlabel{fig:real_sig_gen}{{4}{3}{The signal generator circuit in LTSpice\relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Experiment}{3}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion and Conclusions}{3}{section*.17}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The response from the simulation for one full period.\relax }}{3}{figure.caption.12}\protected@file@percent }
 \newlabel{fig:response}{{5}{3}{The response from the simulation for one full period.\relax }{figure.caption.12}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The response of the Sallen-Key architecture.\relax }}{3}{figure.caption.13}\protected@file@percent }
 \newlabel{fig:sallenkey_sim}{{6}{3}{The response of the Sallen-Key architecture.\relax }{figure.caption.13}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Experiment}{3}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Acknowledgment}{3}{section*.18}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces A snapshot of Teensy's PWM signal with a carrier frequency of $36.6$\unit {\kilo \hertz }.\relax }}{3}{figure.caption.15}\protected@file@percent }
 \newlabel{fig:teensy_pwm}{{7}{3}{A snapshot of Teensy's PWM signal with a carrier frequency of $36.6$\unit {\kilo \hertz }.\relax }{figure.caption.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The response of the second-order Sallen-Key filter.\relax }}{3}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:sallenkey_osc}{{8}{3}{The response of the second-order Sallen-Key filter.\relax }{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion and Conclusions}{3}{section*.17}\protected@file@percent }
-\bibdata{./bib/mechatronics}
-\bibcite{ltspice}{{1}{}{{Analog Devices}}{{}}}
-\bibcite{op292}{{2}{}{{Analog Devices}}{{}}}
-\bibcite{pie610}{{3}{}{{Physik Instrumente}}{{}}}
-\bibcite{teensy}{{4}{}{{PJRC}}{{}}}
+\bibcite{pie610}{{2}{}{{Physik Instrumente}}{{}}}
+\bibcite{teensy}{{3}{}{{PJRC}}{{}}}
+\bibcite{lm358}{{4}{}{{Texas Instruments}}{{}}}
 \global \chardef \firstnote@num\z@ \relax 
 \bibstyle{plainnat}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Acknowledgment}{4}{section*.18}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {}References}{4}{section*.19}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The response of the second-order Sallen-Key filter.\relax }}{4}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:sallenkey_osc}{{8}{4}{The response of the second-order Sallen-Key filter.\relax }{figure.caption.16}{}}
 \newlabel{LastBibItem}{{4}{4}{}{section*.19}{}}
 \@writefile{toc}{\appendix }
 \@writefile{toc}{\contentsline {section}{\numberline {A}Full Circuit Drawing of the Final Design}{4}{section*.20}\protected@file@percent }

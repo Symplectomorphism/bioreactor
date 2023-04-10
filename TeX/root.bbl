@@ -5,16 +5,11 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[{Analog Devices}({\natexlab{a}})]{ltspice}
+\bibitem[{Analog Devices}()]{ltspice}
 {Analog Devices}.
-\newblock {LTSpice}, {\natexlab{a}}.
+\newblock {LTSpice}.
 \newblock URL
   \url{https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html}.
-
-\bibitem[{Analog Devices}({\natexlab{b}})]{op292}
-{Analog Devices}.
-\newblock {OP 292}, {\natexlab{b}}.
-\newblock URL \url{https://www.analog.com/en/products/op292.html}.
 
 \bibitem[{Physik Instrumente}()]{pie610}
 {Physik Instrumente}.
@@ -26,5 +21,10 @@
 {PJRC}.
 \newblock Teensy.
 \newblock URL \url{https://www.pjrc.com/teensy/}.
+
+\bibitem[{Texas Instruments}()]{lm358}
+{Texas Instruments}.
+\newblock {LM358B}.
+\newblock URL \url{https://www.ti.com/product/LM358B}.
 
 \end{thebibliography}

@@ -25,7 +25,7 @@ FASTRUN void timer0_callback() {
     /*
      * Change the amplitude here.
      */
-    int ampl = (int)(0.9*waveformsTable[i]);
+    int ampl = (int)(0.613*waveformsTable[i]);
     analogWrite(pwmpin, ampl);  // write the selected waveform on DAC
     // Serial.print(ampl);
     
@@ -46,10 +46,12 @@ FASTRUN void timer0_callback() {
      *
      * Conversely, given the frequency, say 90Hz, find the delay (us) by
      * 1e6/freq/512
+     * 
+     * delay must be between 3us and 16383 us for Teensy 4.1.
      *
      * */
-    delayMicroseconds(21); // to slow it down a bit if required 3 us to 16383 us
-    // delayMicroseconds(200); // Can't see the light flickering if faster.
+    delayMicroseconds(22); // Corresponds to 88.78Hz.
+    // delayMicroseconds(19531); // Corresponds to a period of 10s for debugging
 }
 
 // the setup routine runs once when you press reset:

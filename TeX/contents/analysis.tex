@@ -130,11 +130,11 @@ Our desired signal is a $90$\unit{\hertz} sinusoidal. We do not want to lose
 this signal, i.e., we want our transfer function $H(s)$ to approximately have a
 unity gain at this frequency. We set $2\pi RC \leq \nicefrac{1}{900}$ or $RC
 \leq 1.768 \times 10^{-4}$\unit{\ohm\farad} to satisfy this requirement. Using
-some standard values of the resistance $R = 47$\unit{\kilo\ohm} and the
-capacitance $C = 1$\unit{\nano\farad}, we obtain $RC = 4.7 \times
-10^{-5}$\unit{\ohm\farad}, meeting the specification. The attenuation at
+some standard values of the resistance $R = 100$\unit{\kilo\ohm} and the
+capacitance $C = 1$\unit{\nano\farad}, we obtain $RC = 1.0 \times
+10^{-4}$\unit{\ohm\farad}, meeting the specification. The attenuation at
 Teensy's PWM carrier frequency of $36.6$\unit{\kilo\hertz} is found by \[ 20
-\log_{10}\left\{\abs{H(j 2\pi 36600)}\right\} = -41.424\,\unit{\decibel}. \]
+\log_{10}\left\{\abs{H(j 2\pi 36600)}\right\} = -54.483\,\unit{\decibel}. \]
 
 Lastly, we want to amplify the input voltage $v_i$ thrice in order to hit the
 $0-10$\unit{\volt} mark. The gain of the non-inverting amplifier is $k = 1 +
@@ -262,8 +262,8 @@ with equation~\eqref{eq:tf} of Section~\ref{ssec:second}: \[ H(s) =
 Therefore, all the analysis that follows equation~\eqref{eq:tf} goes through for
 the Sallen-Key architecture as well. Theory, simulation and experiments show
 that some good values for the resistances $R_d$ and the capacitances $C_d$ are
-$R_d = 47$\unit{\kilo\ohm} and $C_d = 1$\unit{\nano\farad}, with a cutoff
-frequency of $f \approx 3386$\unit{\hertz}. There is a range of resistance and
+$R_d = 100$\unit{\kilo\ohm} and $C_d = 1$\unit{\nano\farad}, with a cutoff
+frequency of $f \approx 1592$\unit{\hertz}. There is a range of resistance and
 capacitance values that work well around these nominal values.
 
 \begin{rem}

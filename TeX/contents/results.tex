@@ -49,11 +49,12 @@ the op-amp \texttt{OP292}.
 
 The performance of the Sallen-Key architecture from Section~\ref{ssec:sallenkey}
 is shown in Figure~\ref{fig:sallenkey_sim} (top plot), where the values for the
-resistances were taken to be $R_d = 68$\unit{\kilo\ohm} and capacitances to be
-$C_d = 1$\unit{\nano\farad}. Even though the performance of the Sallen-Key
-filter of Section~\ref{ssec:sallenkey} looks very similar to the $RC$+buffer
-filter of Secton~\ref{ssec:second} in simulation, the experiments favor the
-Sallen-Key significantly. We will implement this filter in our final design.
+resistances were taken to be $R_1 = R_2 = R = 68$\unit{\kilo\ohm}, $R_f
+= 2R_{in} = 1$\unit{\kilo\ohm} and capacitances to be $C_1 = C_2 = C =
+1$\unit{\nano\farad}. Even though the performance of the Sallen-Key filter of
+Section~\ref{ssec:sallenkey} looks very similar to the $RC$+buffer filter of
+Secton~\ref{ssec:second} in simulation, the experiments favor the Sallen-Key
+significantly. We will implement this filter in our final design.
 
 \begin{figure}[tbh]
 \includegraphics[width=0.5\textwidth]{./figures/sallenkey.png}
@@ -99,9 +100,8 @@ should drive the PI controller without any issues.
 We have also tested the signal generator by driving PI's piezoelectric actuator.
 It turns out that since Teensy's imperfect PWM generation, the best values of
 the various capacitances and resistances seen in the circuit
-diagram~\ref{fig:final_circuit} are as given in Table~\ref{tab:values}. These
+diagram~\ref{fig:final_circuit} are as given in Table~\ref{tab:expvalues}. These
 are the values to be used in the final design.
-
 
 {\renewcommand{\arraystretch}{1.5}
 \begin{table}
@@ -109,7 +109,7 @@ are the values to be used in the final design.
     \caption{Experimental values of resistances and capacitances.}
     \begin{tabular}{*6c}
         \toprule
-        $R_{d1}$ & $R_{d2}$ & $C_{d1}$ & $C_{d2}$ & $R_f$ & $R_{in}$ \\    
+        $R_1$ & $R_2$ & $C_1$ & $C_2$ & $R_f$ & $R_{in}$ \\    
         \hline
         \midrule
         $500$\unit{\kilo\ohm} & $100$\unit{\kilo\ohm} & $2.35$\unit{\nano\farad}
@@ -117,7 +117,7 @@ are the values to be used in the final design.
         $1$\unit{\kilo\ohm} \\
         \bottomrule
     \end{tabular}
-    \label{tab:values}
+    \label{tab:expvalues}
     \vspace{-1em}
 \end{table}
 }

@@ -114,10 +114,10 @@ The $0-3.3$\unit{\volt} PWM signal is to be filtered to extract the modulated
 sine wave. Thanks to the buffer op-amp, the transfer function from the Teensy
 input $v_t$ to the input $v_i$ to the non-inverting amplifier op-amp is given by
 %
-\begin{equation}
+\begin{equation*}
 H(s) = \frac{V_i(s)}{V_t(s)} = \frac{1}{R^2C^2s^2+2RCs+1}.
-\label{eq:tf}
-\end{equation}
+% \label{eq:tf}
+\end{equation*}
 %
 This is a fully-damped transfer function with poles at $s_{1,2} =
 -\nicefrac{1}{RC}$. In other words, the cut-off frequency of this filter is at
@@ -134,12 +134,12 @@ unity gain at this frequency. We set $2\pi RC \leq \nicefrac{1}{450}$ or $RC
 
 The attenuation needed at the PWM carrier frequency provides us with a lower
 bound on the product $RC$. \[ 20 \log{\abs{H(j\omega)}} = -20 \log{\left(1 +
-R^2C^2\omega^2\right)}\,\unit{\decibel}. \] For instance, if we want not less
+R^2C^2\omega^2\right)}\,\unit{\decibel}. \] For instance, if we want no less
 than $100$-fold attenuation at the PWM carrier frequency of
 $36.6$\unit{\kilo\hertz}, then we must have that 
 %
 \begin{align*}
-    -40 &\geq -20 \log{\abs{H(j2\pi 36600)}} \\ 
+    -40 &\geq 20 \log{\abs{H(j2\pi 36600)}} = -20 \log{(1+4\pi^2 R^2C^2f_c^2)} \\ 
     &\Rightarrow 1 + 4 \pi^2 R^2C^236600^2 \geq 100
     \Rightarrow RC \geq 4.327 \times 10^{-5}.
 \end{align*}
@@ -243,10 +243,10 @@ circuit may be found in Figure~\ref{fig:final_circuit} of the appendix.
 \begin{figure}[h]
 \begin{circuitikz}[scale=1]\draw
 (5,.5) node [op amp] (opamp) {\texttt{LM358}}
-(0,0) node [left] {$v_t$} to [R, l=$R_{d1}$, o-*] (2,0) node[below]{$v_m$} 
-to [R, l=$R_{d2}$, *-*] (opamp.+)
-to [C, l_=$C_{d2}$, *-] ($(opamp.+)+(0,-2)$) node [ground] {}
-(opamp.out) |- (3.5,2) to [C, l_=$C_{d1}$, *-] (2,2) to [short] (2,0)
+(0,0) node [left] {$v_t$} to [R, l=$R_{1}$, o-*] (2,0) node[below]{$v_m$} 
+to [R, l=$R_{2}$, *-*] (opamp.+)
+to [C, l_=$C_{2}$, *-] ($(opamp.+)+(0,-2)$) node [ground] {}
+(opamp.out) |- (3.5,2) to [C, l_=$C_{1}$, *-] (2,2) to [short] (2,0)
 (opamp.-) -| (3.5,2)
 (opamp.out) to [short, *-o] (7,.5) node [right] {$v_i$};
 \end{circuitikz}
@@ -256,42 +256,113 @@ to [C, l_=$C_{d2}$, *-] ($(opamp.+)+(0,-2)$) node [ground] {}
 
 We find the governing equations of this circuit. Assume an ideal op-amp model so
 that both of the inputs of the op-amp have potential $v_i$. Let the current $i$
-flowing over $R_{d1}$ split into $i_1$ and $i_2$, the former flowing into
-$C_{d1}$ and the latter into $C_{d2}$ through $R_{d2}$. KCL gives
+flowing over $R_{1}$ split into $i_1$ and $i_2$, the former flowing into
+$C_{1}$ and the latter into $C_2$ through $R_2$. KCL gives
 %
 % \vspace{-1em}
 \begin{align*}
-    i &= i_1 + i_2 = \frac{1}{R_{d1}}(v_t - v_m), \\
-    i_1 &= C_{d1} \frac{\dd\, (v_m - v_i)}{\dd t}, \\
-    i_2 &= C_{d2} \frac{\dd v_i}{\dd t}.
+    i &= i_1 + i_2 = \frac{1}{R_{1}}(v_t - v_m), \\
+    i_1 &= C_{1} \frac{\dd\, (v_m - v_i)}{\dd t}, \\
+    i_2 &= C_2 \frac{\dd v_i}{\dd t}.
 \end{align*}
 %
-KVL around the bottom loop ($v_m - v_i - \text{gnd}$) gives $v_m = R_{d2}i_2 +
-v_i = R_{d2}C_{d2}\frac{\dd v_i}{\dd t} + v_i$. Plugging this into the second
-equation gives $i_1 = R_{d2}C_{d1}C_{d2}\frac{\dd^2v_i}{\dd t^2}$. Combined with
+KVL around the bottom loop ($v_m - v_i - \text{gnd}$) gives $v_m = R_2i_2 +
+v_i = R_2C_2\frac{\dd v_i}{\dd t} + v_i$. Plugging this into the second
+equation gives $i_1 = R_2C_{1}C_2\frac{\dd^2v_i}{\dd t^2}$. Combined with
 the first and third equations, this yields
 %
 \begin{equation}
-    R_{d1}R_{d2}C_{d1}C_{d2}\ddot{v}_i + (R_{d1} + R_{d2})C_{d2}\dot{v}_i + v_i
+    R_{1}R_2C_{1}C_2\ddot{v}_i + (R_{1} + R_2)C_2\dot{v}_i + v_i
     = v_t.
     \label{eq:sallenkey_de}
 \end{equation}
 %
-If we take $R_{d1} = R_{d2} = R_d$ and $C_{d1} = C_{d2} = C_d$ then the transfer
-function for this linear differential equation is observed to coincide with
-equation~\eqref{eq:tf} of Section~\ref{ssec:second}: \[ H(s) =
-\frac{V_i(s)}{V_t(s)} = \frac{1}{R_d^2C_d^2s^2 + 2R_dC_ds + 1}.\]
+The transfer function of the Sallen-Key filter is read as
 %
-Therefore, all the analysis that follows equation~\eqref{eq:tf} goes through for
-the Sallen-Key architecture as well. Theory and simulation indicate that that
-some good values for the resistances $R_d$ and the capacitances $C_d$ are $R_d =
-224$\unit{\kilo\ohm} and $C_d = 1.53$\unit{\nano\farad}, with a cutoff frequency
-of $f \approx 465$\unit{\hertz}. There is a range of resistance and capacitance
-values that work well around these nominal values.
+\begin{equation}
+    T(s) = \frac{1}{R_{1}R_2C_{1}C_2s^2 + (R_{1}+R_2)C_2s + 1}.
+    \label{eq:tf_sallenkey}
+\end{equation}
+%
+We want to make this a Butterworth filter, making its frequency response as flat
+as possible in the passband. To that end, we identify the characteristic
+polynomial as
+\[s^2 + \frac{R_1+R_2}{R_1R_2C_2}s + \frac{1}{R_1R_2C_1C_2} = s^2 +
+2\zeta\omega_ns + \omega_n^2,\] with the damping coefficient $\zeta =
+\nicefrac{1}{\sqrt{2}}$. This requirement on the damping coefficient translates
+to the constraint on the circuit elements:
+%
+\begin{equation}
+    \frac{(R_1+R_2)^2}{2R_1R_2} = \frac{C_1}{C_2}. 
+    \label{eq:cons1}
+\end{equation}
+%
+As in Section~\ref{ssec:second}, we want the natural frequency of the system
+well beyond our desired signal's frequency content so as not to lose signal
+strength, requiring $450\,\unit{\hertz} \leq f_n = \nicefrac{\omega_n}{2\pi} =
+\frac{1}{2\pi\sqrt{R_1R_2C_1C_2}}$, in other words,
+%
+\begin{equation}
+    \sqrt{R_1R_2C_1C_2} \leq \frac{1}{2\pi f_n} = \frac{1}{2\pi 450} \approx
+    3.537 \times 10^{-4}\, \unit{\second}.
+    \label{eq:cons2}
+\end{equation}
+%
+Asking for no less than $100$-fold attenuation at the PWM carrier frequency
+$f_c = 36.6$\unit{\kilo\hertz} provides the further constraint $-40 \geq 20 \log{
+\abs{T(j\omega_c)}}$. Making use of the constraint~\eqref{eq:cons1} and a little
+bit of basic algebra shows that this is approximately equivalent to \[ -40 \geq
+-10 \log{\left(1+R_1^2R_2^2C_1^2C_2^2\omega_c^4\right)}, \] which translates to  
+%
+\begin{equation}
+%    1 + 16\pi^4 R_1^2R_2^2C_1^2C_2^2 f_c^4 \geq 10^4.
+    \sqrt{R_1R_2C_1C_2} \geq \frac{\sqrt{\sqrt{10^4-1}}}{2\pi f_c} \approx 4.348
+    \times 10^{-5}\,\unit{\second}.
+    \label{eq:cons3}
+\end{equation}
+%
+Combining constraints~\eqref{eq:cons2} and~\eqref{eq:cons3} together, we obtain
+a design interval \[ 4.348 \times 10^{-5}\,\unit{\second} \leq
+\sqrt{R_1R_2C_1C_2} \leq 3.537 \times 10^{-4}\, \unit{\second}. \] Combining
+this with the constraint~\eqref{eq:cons1} we obtain \[ 6.150 \times
+10^{-5}\,\unit{\second} \leq (R_1+R_2)C_2 \leq 5 \times 10^{-4}\,\unit{\second}.
+\]
+
+Theory and simulation indicate that that some good values for the resistances
+$R_1$, $R_2$ and the capacitances $C_1$, $C_2$ that obey the constraints are
+$C_2 = 1$\unit{\nano\farad}. Then from the inequality above, we must have $R_1 +
+R_2 \leq 500$\unit{\kilo\ohm}. We distribute this according to $R_1 = 4R_2$ so
+with $R_2 = 100$\unit{\kilo\ohm}. Finally, using the equality~\eqref{eq:cons1}
+with these resistances, we obtain $C_2 = \nicefrac{25}{8}C_1 =
+3.125$\unit{\nano\farad}.
+
+These values lead to a cutoff frequency at $f = 450$\unit{\hertz} and a
+$-76.4$\unit{\decibel} attenuation at the carrier frequency. This is a
+Butterworth filter design, so that it is maximally flat in its passband. These
+values are summarized in Table~\ref{tab:theoretical_values}.
+
+{\renewcommand{\arraystretch}{1.5}
+\begin{table}[t]
+    \centering
+    \caption{Theoretical values of resistances and capacitances.}
+    \begin{tabular}{*6c}
+        \toprule
+        $R_1$ & $R_2$ & $C_1$ & $C_2$ & $R_f$ & $R_{in}$ \\    
+        \hline
+        \midrule
+        $400$\unit{\kilo\ohm} & $100$\unit{\kilo\ohm} &
+        $\nicefrac{25}{8}$\unit{\nano\farad} & $1$\unit{\nano\farad} &
+        $2$\unit{\kilo\ohm} & $1$\unit{\kilo\ohm} \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:theoretical_values}
+    \vspace{-1em}
+\end{table}
+}
 
 \begin{rem}
     This is the filter to be implemented in the final design; however, the
-    experimental values of $R_{d1}$, $R_{d2}$, $C_{d1}$ and $C_{d2}$ will
+    experimental values of $R_{1}$, $R_2$, $C_{1}$ and $C_2$ will
     slightly change to account for imperfect PWM signal, generated by the
     microcontroller.
 \end{rem}

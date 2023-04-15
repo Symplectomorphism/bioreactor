@@ -259,14 +259,14 @@ that both of the inputs of the op-amp have potential $v_i$. Let the current $i$
 flowing over $R_{d1}$ split into $i_1$ and $i_2$, the former flowing into
 $C_{d1}$ and the latter into $C_{d2}$ through $R_{d2}$. KCL gives
 %
-\vspace{-1em}
+% \vspace{-1em}
 \begin{align*}
     i &= i_1 + i_2 = \frac{1}{R_{d1}}(v_t - v_m), \\
-    i_1 &= C_1 \frac{\dd\, (v_m - v_i)}{\dd t}, \\
-    i_2 &= C_2 \frac{\dd v_i}{\dd t}.
+    i_1 &= C_{d1} \frac{\dd\, (v_m - v_i)}{\dd t}, \\
+    i_2 &= C_{d2} \frac{\dd v_i}{\dd t}.
 \end{align*}
 %
-KVL around the bottom loop ($v_m - v_o - \text{gnd}$) gives $v_m = R_{d2}i_2 +
+KVL around the bottom loop ($v_m - v_i - \text{gnd}$) gives $v_m = R_{d2}i_2 +
 v_i = R_{d2}C_{d2}\frac{\dd v_i}{\dd t} + v_i$. Plugging this into the second
 equation gives $i_1 = R_{d2}C_{d1}C_{d2}\frac{\dd^2v_i}{\dd t^2}$. Combined with
 the first and third equations, this yields

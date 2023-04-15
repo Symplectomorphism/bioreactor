@@ -55,15 +55,16 @@ FASTRUN void timer0_callback() {
 }
 
 FASTRUN void timer1_callback() {
-     if (sox.accelerationAvailable())
-         sox.readAcceleration(x, y, z);
+    if (sox.accelerationAvailable())
+     sox.readAcceleration(x, y, z);
 
-      Serial.print(x);
-      Serial.print('\t');
-      Serial.print(y);
-      Serial.print('\t');
-      Serial.print(z);
-      Serial.print('\n');
+    // Write to serial for data acquisition.
+    Serial.print(x);
+    Serial.print('\t');
+    Serial.print(y);
+    Serial.print('\t');
+    Serial.print(z);
+    Serial.print('\n');
 }
 
 // The setup routine runs once when you press reset:

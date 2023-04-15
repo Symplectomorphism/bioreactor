@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.29)  15 APR 2023 11:59
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.12.29)  15 APR 2023 17:36
  restricted system commands enabled.
  file:line:error style messages enabled.
 **root.tex
@@ -907,56 +907,77 @@ Overfull \hbox (5.36023pt too wide) detected at line 145
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2]) (./contents/results.tex
-<./figures/circuit.png, id=130, 2569.6pt x 761.84625pt>
-File: ./figures/circuit.png Graphic file (type png)
-<use ./figures/circuit.png>
-Package luatex.def Info: ./figures/circuit.png  used on input line 29.
-(luatex.def)             Requested size: 227.62204pt x 67.48209pt.
-<./figures/pwm_filtered_one_two_final_signal.png, id=133, 2565.585pt x 1311.90125pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 27.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 27.
+
+<./figures/rcbuffer.png, id=142, 2549.525pt x 871.255pt>
+File: ./figures/rcbuffer.png Graphic file (type png)
+<use ./figures/rcbuffer.png>
+Package luatex.def Info: ./figures/rcbuffer.png  used on input line 41.
+(luatex.def)             Requested size: 227.62204pt x 77.78473pt.
+<./figures/pwm_filtered_one_two_final_signal.png, id=143, 2568.59625pt x 1319.93124pt>
 File: ./figures/pwm_filtered_one_two_final_signal.png Graphic file (type png)
 <use ./figures/pwm_filtered_one_two_final_signal.png>
-Package luatex.def Info: ./figures/pwm_filtered_one_two_final_signal.png  used on input line 44.
-(luatex.def)             Requested size: 255.0pt x 130.37708pt.
+Package luatex.def Info: ./figures/pwm_filtered_one_two_final_signal.png  used on input line 47.
+(luatex.def)             Requested size: 255.0pt x 131.0341pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 44--45
+Overfull \hbox (9.0pt too wide) in paragraph at lines 47--48
  [][] 
  []
 
-<./figures/sallenkey.png, id=138, 2572.61125pt x 1331.97626pt>
-File: ./figures/sallenkey.png Graphic file (type png)
-<use ./figures/sallenkey.png>
-Package luatex.def Info: ./figures/sallenkey.png  used on input line 60.
-(luatex.def)             Requested size: 255.0pt x 132.02661pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 60--61
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./figures/sallenkey_response.png, id=149, 2568.59625pt x 1319.93124pt>
+File: ./figures/sallenkey_response.png Graphic file (type png)
+<use ./figures/sallenkey_response.png>
+Package luatex.def Info: ./figures/sallenkey_response.png  used on input line 70.
+(luatex.def)             Requested size: 255.0pt x 131.0341pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 70--71
  [][] 
  []
 
-<./figures/teensy_pwm_osc.jpg, id=140, 803.0pt x 481.8pt>
+<./figures/sallenkey_circuit.png, id=150, 2555.5475pt x 901.3675pt>
+File: ./figures/sallenkey_circuit.png Graphic file (type png)
+<use ./figures/sallenkey_circuit.png>
+Package luatex.def Info: ./figures/sallenkey_circuit.png  used on input line 76.
+(luatex.def)             Requested size: 255.0pt x 89.93571pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 76--77
+ [][] 
+ []
+
+[3<./figures/rcbuffer.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 89.
+
+<./figures/teensy_pwm_osc.jpg, id=170, 803.0pt x 481.8pt>
 File: ./figures/teensy_pwm_osc.jpg Graphic file (type jpg)
 <use ./figures/teensy_pwm_osc.jpg>
-Package luatex.def Info: ./figures/teensy_pwm_osc.jpg  used on input line 76.
+Package luatex.def Info: ./figures/teensy_pwm_osc.jpg  used on input line 92.
 (luatex.def)             Requested size: 255.0pt x 152.99553pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 76--78
+Overfull \hbox (9.0pt too wide) in paragraph at lines 92--94
  [][] 
  []
 
-<./figures/output_osc.jpg, id=142, 803.0pt x 481.8pt>
+<./figures/output_osc.jpg, id=172, 803.0pt x 481.8pt>
 File: ./figures/output_osc.jpg Graphic file (type jpg)
 <use ./figures/output_osc.jpg>
-Package luatex.def Info: ./figures/output_osc.jpg  used on input line 95.
+Package luatex.def Info: ./figures/output_osc.jpg  used on input line 111.
 (luatex.def)             Requested size: 255.0pt x 152.99553pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 95--96
+Overfull \hbox (9.0pt too wide) in paragraph at lines 111--112
  [][] 
  []
 
-) (./contents/conclusion.tex) (./contents/acknowledgment.tex [3<./figures/circuit.png>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 1.
-
-) (./root.bbl [4<./figures/pwm_filtered_one_two_final_signal.png><./figures/sallenkey.png><./figures/teensy_pwm_osc.jpg><./figures/output_osc.jpg>]
+) (./contents/conclusion.tex) (./contents/acknowledgment.tex) (./root.bbl [4<./figures/pwm_filtered_one_two_final_signal.png><./figures/sallenkey_response.png><./figures/sallenkey_circuit.png><./figures/teensy_pwm_osc.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 9--13
  []\TU/lmr/m/n/9 Ana-log De-vices.  LT-Spice.  URL [][]$\TU/lmtt/m/n/9 https:
  []
@@ -995,26 +1016,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--19
 
 Class revtex4 Warning: Float cannot be placed.
 
-) [5] [6] (./root.aux)
+) [5<./figures/output_osc.jpg>] [6] (./root.aux)
 Package rerunfilecheck Info: File `root.out' has not changed.
-(rerunfilecheck)             Checksum: 95DA90F587C6C4A326BC05FC3E6360A9;1745.
+(rerunfilecheck)             Checksum: 2B82E3E0A06485401155581F8C333B8D;2070.
 )
 
 Here is how much of LuaTeX's memory you used:
- 50581 strings out of 478384
- 195355,1977958 words of node,token memory allocated
- 2610 words of node memory still in use:
-   69 hlist, 9 vlist, 8 rule, 10 math, 43 glue, 38 kern, 93 glyph, 60 attribute, 60 glue_spec, 60 attribute_list, 3 pdf_action nodes
-   avail lists: 1:10,2:6051,3:4609,4:174,5:685,6:98,7:17118,8:148,9:2447,10:18,11:1002
- 69193 multiletter control sequences out of 65536+600000
+ 50599 strings out of 478384
+ 195353,1977958 words of node,token memory allocated
+ 2618 words of node memory still in use:
+   69 hlist, 9 vlist, 8 rule, 10 math, 43 glue, 38 kern, 93 glyph, 62 attribute, 60 glue_spec, 62 attribute_list, 3 pdf_action nodes
+   avail lists: 1:10,2:6047,3:4609,4:166,5:718,6:96,7:17122,8:149,9:2447,10:18,11:915
+ 69202 multiletter control sequences out of 65536+600000
  82 fonts using 5718191 bytes
  119i,16n,114p,481b,1345s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman9-italic.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on root.pdf (6 pages, 689007 bytes).
+Output written on root.pdf (6 pages, 755509 bytes).
 
-PDF statistics: 329 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
- 42 named destinations out of 1000 (max. 131072)
- 112 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 344 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 45 named destinations out of 1000 (max. 131072)
+ 128 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -299,46 +299,52 @@ to the constraint on the circuit elements:
 %
 As in Section~\ref{ssec:second}, we want the natural frequency of the system
 well beyond our desired signal's frequency content so as not to lose signal
-strength, requiring $450\,\unit{\hertz} \leq f_n = \nicefrac{\omega_n}{2\pi} =
+strength, for example, $450\,\unit{\hertz} \leq f_n = \nicefrac{\omega_n}{2\pi} =
 \frac{1}{2\pi\sqrt{R_1R_2C_1C_2}}$, in other words,
 %
 \begin{equation}
-    \sqrt{R_1R_2C_1C_2} \leq \frac{1}{2\pi f_n} = \frac{1}{2\pi 450} \approx
-    3.537 \times 10^{-4}\, \unit{\second}.
+    \sqrt{R_1R_2C_1C_2} \leq \frac{1}{2\pi f_n}.
     \label{eq:cons2}
 \end{equation}
 %
-Asking for no less than $100$-fold attenuation at the PWM carrier frequency
-$f_c = 36.6$\unit{\kilo\hertz} provides the further constraint $-40 \geq 20 \log{
-\abs{T(j\omega_c)}}$. Making use of the constraint~\eqref{eq:cons1} and a little
-bit of basic algebra shows that this is approximately equivalent to \[ -40 \geq
--10 \log{\left(1+R_1^2R_2^2C_1^2C_2^2\omega_c^4\right)}, \] which translates to  
+Asking for no less than $\alpha$-fold attenuation at the PWM carrier frequency
+$f_c = 36.6$\unit{\kilo\hertz} provides the further constraint $-20 \log \alpha
+\geq 20 \log{ \abs{T(j\omega_c)}}$. Performing a little bit of linear algebra
+involving the constraint~\eqref{eq:cons1} in conjuction with the transfer
+function~\eqref{eq:tf_sallenkey} shows that this is equivalent to
+\[ -20 \log \alpha \geq -10 \log{\left(1+R_1^2R_2^2C_1^2C_2^2\omega_c^4\right)},
+\] which translates to  
 %
 \begin{equation}
 %    1 + 16\pi^4 R_1^2R_2^2C_1^2C_2^2 f_c^4 \geq 10^4.
-    \sqrt{R_1R_2C_1C_2} \geq \frac{\sqrt{\sqrt{10^4-1}}}{2\pi f_c} \approx 4.348
-    \times 10^{-5}\,\unit{\second}.
+    \sqrt{R_1R_2C_1C_2} \geq \frac{\sqrt{\sqrt{\alpha^2-1}}}{2\pi f_c}
     \label{eq:cons3}
 \end{equation}
 %
 Combining constraints~\eqref{eq:cons2} and~\eqref{eq:cons3} together, we obtain
-a design interval \[ 4.348 \times 10^{-5}\,\unit{\second} \leq
-\sqrt{R_1R_2C_1C_2} \leq 3.537 \times 10^{-4}\, \unit{\second}. \] Combining
-this with the constraint~\eqref{eq:cons1} we obtain \[ 6.150 \times
-10^{-5}\,\unit{\second} \leq (R_1+R_2)C_2 \leq 5 \times 10^{-4}\,\unit{\second}.
-\]
+a design interval \[ \frac{\sqrt{\sqrt{\alpha^2 - 1}}}{2\pi f_c} \leq
+\sqrt{R_1R_2C_1C_2} \leq \frac{1}{2\pi f_n}. \] Combining
+this with the constraint~\eqref{eq:cons1} we obtain \[
+\frac{\sqrt{\sqrt{\alpha^2 - 1}}}{\sqrt{2}\pi f_c} \leq (R_1+R_2)C_2 \leq
+\frac{1}{\sqrt{2}\pi f_n}. \]
 
-To find specific values for the resistances and capacitances, start with a value
-for $C_2 = 1$\unit{\nano\farad}. From the inequality above, we must have $R_1 +
-R_2 \leq 500$\unit{\kilo\ohm}. We distribute this according to $R_1 = 4R_2$ with
-$R_2 = 100$\unit{\kilo\ohm}. Finally, using the equality~\eqref{eq:cons1} with
-these resistances, we obtain $C_2 = \nicefrac{25}{8}C_1 =
-3.125$\unit{\nano\farad}.
+To find specific values for the resistances and capacitances, we specify our
+desired values for the natural frequency, $f_n$, of the Sallen-Key filter, the
+decoupling capacitance, $C_2$, and the ratio between the resistances, $r =
+\nicefrac{R_1}{R_2}$. Once these are specified, the values of the remaining
+circuit components can be pinpointed. Indeed, from the
+constraint~\eqref{eq:cons1}, we obtain that \[C_1 = \frac{(1+r)^2}{2r}C_2. \] We
+want the sum of the resistances to be as large as possible since this filters at
+the lowest possible cut-off frequency while providing ample attenuation at the
+PWM carrier frequency. The last inequality then dictates \[ R_2 =
+\frac{1}{(1+r)\sqrt2\pi f_n C_2} \;\; \text{ and } \;\; R_1 = rR_2.\]
 
-These values lead to a cutoff frequency at $f = 450$\unit{\hertz} and a
-$-76.4$\unit{\decibel} attenuation at the carrier frequency. This is a
-Butterworth filter design, so that it is maximally flat in its passband. These
-values are summarized in Table~\ref{tab:theoretical_values}.
+We have used this procedure to compute the values for the circuit components,
+starting with $f_n = 450$\unit{\hertz}, $C_2 = 1$\unit{\nano\farad} and $r = 5$.
+The values for the remaining components are provided in
+Table~\ref{tab:theoretical_values}. This is a Butterworth filter that is
+maximally flat in its passband and provides $-76.4$\unit{\decibel} attenuation
+at the carrier frequency, 
 
 {\renewcommand{\arraystretch}{1.5}
 \begin{table}[t]
@@ -349,8 +355,8 @@ values are summarized in Table~\ref{tab:theoretical_values}.
         $R_1$ & $R_2$ & $C_1$ & $C_2$ & $R_f$ & $R_{in}$ \\    
         \hline
         \midrule
-        $400$\unit{\kilo\ohm} & $100$\unit{\kilo\ohm} &
-        $\nicefrac{25}{8}$\unit{\nano\farad} & $1$\unit{\nano\farad} &
+        $416.8$\unit{\kilo\ohm} & $83.4$\unit{\kilo\ohm} &
+        $3.6$\unit{\nano\farad} & $1$\unit{\nano\farad} &
         $2$\unit{\kilo\ohm} & $1$\unit{\kilo\ohm} \\
         \bottomrule
     \end{tabular}
@@ -360,8 +366,8 @@ values are summarized in Table~\ref{tab:theoretical_values}.
 }
 
 \begin{rem}
-    This is the filter to be implemented in the final design; however, the
-    experimental values of $R_{1}$, $R_2$, $C_{1}$ and $C_2$ will
-    slightly change to account for imperfect PWM signal, generated by the
-    microcontroller.
+    This is the filter to be implemented in the final design. The experimental
+    values of $R_{1}$, $R_2$, $C_{1}$ and $C_2$ are selected to be standard
+    values that are closest to the values provided in
+    Table~\ref{tab:theoretical_values}.
 \end{rem}

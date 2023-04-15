@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex root"] 1681577362 "root.aux" "root.bbl" "root" 1681581561 0
+["bibtex root"] 1681601572 "root.aux" "root.bbl" "root" 1681601798 0
   "./bib/mechatronics.bib" 1681271949 2870 a51a1934426b4195050bd0242ded2364 ""
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "root.aux" 1681581561 6234 e2756b042c9e3dc004fcb237a57ab6e9 "lualatex"
+  "root.aux" 1681601798 6796 9010f3ad06a1fb9cacd47f4bb63f4df9 "lualatex"
   (generated)
   "root.bbl"
   "root.blg"
   (rewritten before read)
-["lualatex"] 1681581559 "root.tex" "root.pdf" "root" 1681581561 0
+["lualatex"] 1681601796 "root.tex" "root.pdf" "root" 1681601798 0
   "/home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1672565318 81837 d0bcf5f32a3b606c616c15917a6a0ee8 ""
   "/home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmmono9-regular.luc" 1679615937 81875 fc990e20d6cedfcd1b8b8c3c30aa979b ""
   "/home/icute/.texlive2022/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc" 1672565318 128410 2c8843a4c264e985170a9d377f3581dd ""
@@ -345,21 +345,22 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1672339844 4623329 5e28269c2aee4b9e2f0ef6bdcff03654 ""
   "/usr/local/texlive/2022/texmf-var/web2c/luahbtex/lualatex.fmt" 1672339860 11886421 3dc5aecd8b19155c6907bb92dcbcb5b7 ""
   "contents/acknowledgment.tex" 1680926430 277 6bcf576bd569afe08dfd9fad0a8cfc99 ""
-  "contents/analysis.tex" 1681581558 15282 69740d5183e33ec109b56362813d116c ""
+  "contents/analysis.tex" 1681601795 15693 b4de0f7d934b4b54545c90847cbb9fb9 ""
   "contents/appendices.tex" 1681577361 7869 a8af0af191b7bd22b3252fa8c71dbba4 ""
   "contents/conclusion.tex" 1681076906 597 2983a24cf273fb284247cc7e6d1d37b2 ""
   "contents/introduction.tex" 1681077178 606 f2c8eef6e32f84b6c50b11a987ea139b ""
-  "contents/results.tex" 1681577360 5057 8ff8c79e674140eb823ea4ba36774324 ""
+  "contents/results.tex" 1681601675 5499 abd3b7011ecc17bfc4f2421cf66c5e62 ""
   "contents/title.tex" 1681072530 701 fa9ddc5f1344c860508dbd4f33e0d9b3 ""
-  "figures/circuit.png" 1680919625 80060 6fb1015400d106df9c3cc221362fe326 ""
   "figures/output_osc.jpg" 1681021201 122871 a0df6b434110bce601801f056896966b ""
-  "figures/pwm_filtered_one_two_final_signal.png" 1680919568 64712 3d8f0643e0fe31bfd2246b6ddd17ee11 ""
-  "figures/sallenkey.png" 1680938038 115539 cdcdc1918ace07a92db06e1774193e5c ""
+  "figures/pwm_filtered_one_two_final_signal.png" 1681601007 68392 0ef00a9f61160d5a233cdf16f91edc04 ""
+  "figures/rcbuffer.png" 1681600758 99911 04c40a57fb80f7d6f78f6d6c185dcf87 ""
+  "figures/sallenkey_circuit.png" 1681601283 133085 d79902afe8a1b271193e9efc6d5d7b8d ""
+  "figures/sallenkey_response.png" 1681601243 48640 55f6dca38fe71c0a8d36178892b2b1b8 ""
   "figures/teensy_pwm_osc.jpg" 1681078110 99688 f186524f8941575fe67f8d1e703a1a62 ""
   "preamble.tex" 1681273449 3016 1be3aff850685a2100d9f75a0a8d53c9 ""
-  "root.aux" 1681581561 6234 e2756b042c9e3dc004fcb237a57ab6e9 "lualatex"
-  "root.bbl" 1681577362 958 b76c77b3bd50d2ebe98b4296ba92b9da "bibtex root"
-  "root.out" 1681581561 1745 95da90f587c6c4a326bc05fc3e6360a9 "lualatex"
+  "root.aux" 1681601798 6796 9010f3ad06a1fb9cacd47f4bb63f4df9 "lualatex"
+  "root.bbl" 1681601572 958 b76c77b3bd50d2ebe98b4296ba92b9da "bibtex root"
+  "root.out" 1681601798 2070 2b82e3e0a06485401155581f8c333b8d "lualatex"
   "root.tex" 1681063656 3378 8b1082f8d50d40f6a4a3c9a2b1ef7101 ""
   (generated)
   "root.aux"

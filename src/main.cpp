@@ -6,6 +6,7 @@
  *
  *        Generates a sine wave with specified amplitude and frequency at 12-bit
  *        resolution through values in the Waveforms.h lookup file.
+ *        A square wave with the same frequency is commanded to the builtin led.
  *        Reads acceleration data from LSM6DSOX IMU over i2c protocol.
  *
  * @version 1.0
@@ -41,6 +42,7 @@ FASTRUN void timer0_callback() {
     int ampl = (int)(0.613*waveformsTable[i]);
     analogWrite(pwmpin, ampl);
     
+    // Sends a square-wave to the built-in led.
     if (i<256) {
         digitalWrite(ledpin, HIGH);
     }

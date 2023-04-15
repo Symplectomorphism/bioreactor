@@ -130,7 +130,7 @@ excellent high-frequency attenuation.
 Our desired signal is a $90$\unit{\hertz} sinusoidal. We do not want to lose
 this signal, i.e., we want our transfer function $H(s)$ to approximately have a
 unity gain at this frequency. We set $2\pi RC \leq \nicefrac{1}{450}$ or $RC
-\leq 3.537 \times 10^{-4}$\unit{\ohm\farad} to satisfy this requirement. 
+\leq 3.537 \times 10^{-4}$\unit{\second} to satisfy this requirement. 
 
 The attenuation needed at the PWM carrier frequency provides us with a lower
 bound on the product $RC$. \[ 20 \log{\abs{H(j\omega)}} = -20 \log{\left(1 +
@@ -148,15 +148,15 @@ Putting this constraint together with the constraint in the previous paragraph,
 we must have that 
 %
 \begin{equation}
-    4.327 \times 10^{-5}\,\unit{\ohm\farad} \leq RC \leq 3.537 \times
-    10^{-4}\,\unit{\ohm\farad}.
+    4.327 \times 10^{-5}\,\unit{\second} \leq RC \leq 3.537 \times
+    10^{-4}\,\unit{\second}.
     \label{eq:rc_req}
 \end{equation}
 
 % Using
 % some standard values of the resistance $R = 100$\unit{\kilo\ohm} and the
 % capacitance $C = 1$\unit{\nano\farad}, we obtain $RC = 1.0 \times
-% 10^{-4}$\unit{\ohm\farad}, meeting the specification. The attenuation at
+% 10^{-4}$\unit{\second}, meeting the specification. The attenuation at
 % Teensy's PWM carrier frequency of $36.6$\unit{\kilo\hertz} is found by \[ 20
 % \log_{10}\left\{\abs{H(j 2\pi 36600)}\right\} = -54.483\,\unit{\decibel}. \]
 

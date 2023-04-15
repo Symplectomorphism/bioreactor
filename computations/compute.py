@@ -14,6 +14,9 @@ Example usage:
 (2) python3 compute 450.0 4.7e-9 10.0: 
     corresponds to a desired fn = 450.0 Hz, C2 = 4.7nF, R1 = 10*R2
     Output: R1 = 96746, R2 = 9674.6, C1 = 28.44n, C2 = 4.7n
+(3) python3 compute 450.0 1e-9 5.0:
+    corresponds to a desired fn = 450.0 Hz, C2 = 1nF, R1 = 5*R2
+    Output: R1 = 416813, R2 = 83362.6, C1 = 3.6n, C2 = 1n
 """
 
 fn = float(sys.argv[1])

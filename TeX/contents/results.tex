@@ -99,19 +99,21 @@ should drive the PI controller without any issues.
 We have also tested the signal generator by driving PI's piezoelectric actuator.
 It turns out that since Teensy's imperfect PWM generation, the best values of
 the various capacitances and resistances seen in the circuit
-diagram~\ref{fig:final_circuit} are as given in Table~\ref{tab:values}, where
-$R_{d1} = R_{d2} = R_d$ and $C_{d1} = C_{d2} = C_d$.
+diagram~\ref{fig:final_circuit} are as given in Table~\ref{tab:values}. These
+are the values to be used in the final design.
+
 
 {\renewcommand{\arraystretch}{1.5}
 \begin{table}
     \centering
     \caption{Experimental values of resistances and capacitances.}
-    \begin{tabular}{*4c}
+    \begin{tabular}{*6c}
         \toprule
-        $R_d$ & $C_d$ & $R_f$ & $R_{in}$ \\    
+        $R_{d1}$ & $R_{d2}$ & $C_{d1}$ & $C_{d2}$ & $R_f$ & $R_{in}$ \\    
         \hline
         \midrule
-        $200$\unit{\kilo\ohm} & $2.35$\unit{\nano\farad} & $2$\unit{\kilo\ohm} &
+        $500$\unit{\kilo\ohm} & $100$\unit{\kilo\ohm} & $2.35$\unit{\nano\farad}
+          & $1$\unit{\nano\farad} & $2$\unit{\kilo\ohm} &
         $1$\unit{\kilo\ohm} \\
         \bottomrule
     \end{tabular}

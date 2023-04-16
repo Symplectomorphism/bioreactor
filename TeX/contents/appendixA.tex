@@ -1,0 +1,49 @@
+\vspace{-1em}
+\section{Full Circuit Drawing of the Final Design}
+\label{sec:fulldesign}
+\vspace{-1em}
+
+The final signal generator circuit schematic is presented in
+Figure~\ref{fig:final_circuit}. The potential $v_t$ denotes the
+$0-3.3$\unit{\volt} PWM signal modulating a $90$\unit{\hertz} sinusoidal wave at
+a carrier frequency of $36.6$\unit{\kilo\hertz}. The potential $v_o$ denotes the
+$0-10$\unit{\volt} analog $90$\unit{\hertz} sine-wave signal ready to be sent to
+the Physik Instrumente controller E-610, depicted in the figure as the impedance
+$R_{\text{load}}$, as its reference input. The capacitances and the resistances
+are provided in Table~\ref{tab:expvalues}.
+
+\begin{figure*}[b]
+\begin{circuitikz}[scale=2, node distance=0.1mm and 0.1mm, rotate=-90, transform
+    shape]
+\draw (5,.5) node [op amp] (opamp) {\texttt{LM358}}
+(opamp.down) -- ++(0,-0.25) node[ground] {}
+(0,0) node [left] {$v_t$} to [R, l=$R_1$, o-*] (2,0) node[below]{$v_m$} 
+to [R, l=$R_2$, *-*] (opamp.+)
+to [C, l_=$C_2$, *-] ($(opamp.+)+(0,-2)$) node [ground] {}
+(opamp.out) |- (3.5,2) to [C, l_=$C_1$, *-] (2,2) to [short] (2,0)
+(opamp.-) -| (3.5,2)
+% (opamp.out) to [short, *-*] (6.5,.5) node (vi) [above] {$v_i$};
+(opamp.out) node (vi) [above right = of opamp.out]{$v_i$};
+\draw[-latex] (opamp.up) -- ++(0,0.5) node [above] {$V_+$};
+
+\draw (opamp.out) to[short, *-] ++(0.5,0) node[op amp, noinv input up, anchor=+]
+(opamp2) {\texttt{LM358}}
+(opamp2.-) -- ++(0, -2.0) coordinate (tmp) to [R, l=$R_{in}$, *-] ++(0,-2) node
+[ground] (gnd) {} (tmp) to [R, l=$R_f$, -*] (tmp -| opamp2.out) -- (opamp2.out)
+to [short, *-o] ++(1,0) node[above]{$v_o$};
+
+\draw let 
+    \p1 = (tmp), 
+    \p2 = (opamp2.out)
+    in
+    (\x2, \y1) to [R, l=$R_{\text{load}}$] ++(0, -2) node[ground] {};
+
+\draw (opamp2.down) -- ++(0,-0.25) node[ground] {};
+\draw[-latex] (opamp2.up) -- ++(0,0.5) node [above] {$V_+$};
+
+\end{circuitikz}
+\caption{The final signal generator circuit design.}
+\label{fig:final_circuit}
+\end{figure*}
+
+

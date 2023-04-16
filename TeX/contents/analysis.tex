@@ -119,39 +119,37 @@ H(s) = \frac{V_i(s)}{V_t(s)} = \frac{1}{R^2C^2s^2+2RCs+1}.
 % \label{eq:tf}
 \end{equation*}
 %
-This is a fully-damped transfer function with poles at $s_{1,2} =
+This is a critically-damped transfer function with both poles at $s_{1,2} =
 -\nicefrac{1}{RC}$. In other words, the cut-off frequency of this filter is at
-$f = \frac{1}{2\pi RC}$ with a roll-off of $40$\unit{\decibel} per decade.
+$f_n = \frac{1}{2\pi RC}$ with a roll-off of $40$\unit{\decibel} per decade.
 Contrast this to the first-order filter of the previous subsection where the
 roll-off was $20$\unit{\decibel} per decade. The greater roll-off rate allows us
 be able to select $2\pi RC \ll \nicefrac{1}{f}$ while simultaneously achieving
 excellent high-frequency attenuation.
 
-Our desired signal is a $90$\unit{\hertz} sinusoidal. We do not want to lose
-this signal, i.e., we want our transfer function $H(s)$ to approximately have a
-unity gain at this frequency. We set $2\pi RC \leq \nicefrac{1}{450}$ or $RC
-\leq 3.537 \times 10^{-4}$\unit{\second} to satisfy this requirement. 
+Our desired signal is a $90$\unit{\hertz} sinusoidal, which should not be
+attenuated by the low-pass filter, i.e., the transfer function $H(s)$ should
+have approximately a unity gain at this frequency. To that end, we set $f_n = 5
+\times 90 = 450$\unit{\hertz}, which produces the constraint $RC \leq
+\nicefrac{1}{2\pi f_n}$.
 
-The attenuation needed at the PWM carrier frequency provides us with a lower
-bound on the product $RC$. \[ 20 \log{\abs{H(j\omega)}} = -20 \log{\left(1 +
-R^2C^2\omega^2\right)}\,\unit{\decibel}. \] For instance, if we want no less
-than $100$-fold attenuation at the PWM carrier frequency of
-$36.6$\unit{\kilo\hertz}, then we must have that 
+The attenuation needed at the PWM carrier frequency $f_c =
+36.6$\unit{\kilo\hertz} provides us with a lower bound on the product $RC$. 
+%\[ 20 \log{\abs{H(j\omega)}} = -20 \log{\left(1 + 
+% R^2C^2\omega^2\right)}\,\unit{\decibel}. \] 
+If we want no less than $\alpha$-fold attenuation, then we must have that 
 %
 \begin{align*}
-    -40 &\geq 20 \log{\abs{H(j2\pi 36600)}} = -20 \log{(1+4\pi^2 R^2C^2f_c^2)} \\ 
-    &\Rightarrow 1 + 4 \pi^2 R^2C^236600^2 \geq 100
-    \Rightarrow RC \geq 4.327 \times 10^{-5}.
+    -20 \log \alpha &\geq 20 \log{\abs{H(j2\pi f_c)}} = -20 \log{(1+4\pi^2
+    R^2C^2f_c^2)} \\ &\Rightarrow 1 + 4 \pi^2 R^2C^2f_c^2 \geq \alpha \Rightarrow
+    RC \geq \frac{\sqrt{\alpha-1}}{2\pi f_c}.
 \end{align*}
 %
-Putting this constraint together with the constraint in the previous paragraph,
-we must have that 
+We summarize the lower and upper bounds on $RC$:
 %
-\begin{equation}
-    4.327 \times 10^{-5}\,\unit{\second} \leq RC \leq 3.537 \times
-    10^{-4}\,\unit{\second}.
-    \label{eq:rc_req}
-\end{equation}
+\begin{equation*}
+    \frac{\sqrt{\alpha-1}}{2\pi f_c} \leq RC \leq \frac{1}{2\pi f_n}.
+\end{equation*}
 
 % Using
 % some standard values of the resistance $R = 100$\unit{\kilo\ohm} and the

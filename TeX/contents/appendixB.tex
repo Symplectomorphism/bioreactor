@@ -1,0 +1,123 @@
+\vspace{-1em}
+\section{Alternative Filter}
+\vspace{-1em}
+
+During testing, I have mistakenly implemented the circuit presented in
+Figure~\ref{fig:alt_circuit}. Later, I analyzed the circuit by figuring out its
+transfer function. I include this circuit in here just as an academic curiosity.
+It has no bearing on the ISS mission and should be ignored for that purpose.
+
+
+\begin{figure*}[h]
+\begin{circuitikz}[scale=1.5, node distance=0.1mm and 0.1mm, transform shape]
+\draw (5,.5) node [op amp] (opamp) {\texttt{LM358}}
+(opamp.down) -- ++(0,-0.25) node[ground] {}
+(-1,0) node [left] {$v_t$} to [R, l=$R_1$, o-*] (1,0) node[below]{$v_m$} -- ++(0, 0)
+to [R, l=$R_2$, -*] (opamp.+)
+to [C, l_=$C_2$, *-] ($(opamp.+)+(0,-2)$) node [ground] {}
+(opamp.out) |- (3.5,2) to [C, l_=$C_1$, *-, v^=$v_1$] (1,2) to [R, l=$R$] (1,0)
+(opamp.-) -| (3.5,2)
+% (opamp.out) to [short, *-*] (6.5,.5) node (vi) [above] {$v_i$};
+(opamp.out) node (vi) [above right = of opamp.out]{$v_i$};
+\draw[-latex] (opamp.up) -- ++(0,0.5) node [above] {$V_+$};
+
+\draw (opamp.out) to[short, *-] ++(0.5,0) node[op amp, noinv input up, anchor=+]
+(opamp2) {\texttt{LM358}}
+(opamp2.-) -- ++(0, -2.0) coordinate (tmp) to [R, l=$R_{in}$, *-] ++(0,-2) node
+[ground] (gnd) {} (tmp) to [R, l=$R_f$, -] (tmp -| opamp2.out) -- (opamp2.out)
+to [short, *-o] ++(1,0) node[above]{$v_o$};
+
+% \draw let 
+%     \p1 = (tmp), 
+%     \p2 = (opamp2.out)
+%     in
+%     (\x2, \y1) to [R, l=$R_{\text{load}}$] ++(0, -2) node[ground] {};
+
+\draw (opamp2.down) -- ++(0,-0.25) node[ground] {};
+\draw[-latex] (opamp2.up) -- ++(0,0.5) node [above] {$V_+$};
+
+\end{circuitikz}
+\caption{Alternative LPF circuit.}
+\label{fig:alt_circuit}
+\end{figure*}
+
+
+\vspace{-1em}
+\subsection{Deriving the equations of the circuit}
+\vspace{-1em}
+
+The voltage divider at the inverting input of the second op-amp gives 
+%
+\begin{equation}
+    v_o = \left(1+\nicefrac{R_f}{R_{in}}\right)v_i =: kv_i.
+    \label{eq:b1}
+\end{equation}
+%
+Let $i_1$ and $i_2$ be the currents that flow over $C_1$ and $C_2$,
+respectively. KVL around various loops give the following relationships
+%
+\begin{align}
+    \label{eq:b2} v_m &= R_2i_2 + v_i, \quad &(v_m - v_i - \text{gnd}),  \\
+    \label{eq:b3} v_m &= Ri_1 + v_1 + v_i, \quad &(v_m - v_1 - v_i - \text{gnd}), \\
+    \label{eq:b4} v_t &= R_1(i_1 + i_2) + v_m, \quad &(v_t - v_m - \text{gnd}).
+\end{align}
+% 
+The constitutive equations for capacitors provide the last two relevant
+equations \[ i_1 = C_1 \dot{v}_1, \qquad i_2 = C_2 \dot{v}_i. \] We want to
+obtain an input-output relationship between $v_t$ and $v_o$.
+
+\paragraph{Step 1.} Use constitutive equations for the capacitors to reduce
+equations~(\ref{eq:b2}-\ref{eq:b4}).
+%
+\begin{align*}
+    v_m &= R_2C_2\dot{v}_i + v_i = RC_1\dot{v}_1 + v_1 + v_i, \\
+    v_t &= R_1C_1\dot{v}_1 + R_1C_2\dot{v}_i + v_m.
+\end{align*}
+
+\paragraph{Step 2.} Substitute equation~\eqref{eq:b2} into
+equation~\eqref{eq:b4}.
+\begin{align*} 
+    v_t &= R_1C_1\dot{v}_1 + R_1C_2\dot{v}_i + R_2C_2\dot{v}_i + v_i \\ 
+        &= R_1C_1\dot{v}_1 + (R_1+R_2)C_2\dot{v}_i + v_i.
+\end{align*}
+
+\paragraph{Step 3.} Eliminate $v_1$ and $\dot{v}_1$.
+%
+\begin{align*}
+    RC_1\dot{v}_t + v_t &= R_1C_1\left(RC_1\ddot{v}_1 + \dot{v}_1 \right) + (R_1
+    + R_2)RC_1C_2\ddot{v}_i + \\ 
+    &\hspace{2em}RC_1\dot{v}_i + (R_1+R_2)C_2\dot{v}_i + v_i \\
+    &= R_1R_2C_1C_2\ddot{v}_i + (R_1+R_2)RC_1C_2\ddot{v}_i + \\
+    &\hspace{2em}\left(RC_1 + (R_1+R_2)C_2\right)\dot{v}_i + v_i \\
+    &= \underbrace{\left(R_1R_2 + R_1R + R_2R\right)C_1C_2}_{a}\ddot{v}_i + \\
+    &\hspace{2em}\underbrace{\left(RC_1 + (R_1+R_2)C_2\right)}_{b}\dot{v}_i + v_i.
+\end{align*}
+%
+where in the second equality, we used the first equations from \textit{Step 1}.
+Combining this with equation~\eqref{eq:b1} we obtain the final relationship.
+%
+\begin{equation}
+a\ddot{v}_o + b\dot{v}_o + v_o = k(RC_1\dot{v}_t + v_t).
+\label{eq:alt_de}
+\end{equation}
+%
+As a transfer function, we have 
+%
+\begin{equation}
+T(s) = \frac{V_o(s)}{V_t(s)} = k\frac{RC_1s + 1}{as^2 + bs + 1}.
+\label{eq:alt_tf}
+\end{equation}
+%
+Note that if $R = 0$, we recover the original Sallen-Key low-pass filter
+transfer function~\eqref{eq:tf_sallenkey}:
+%
+\[\frac{V_o(s)}{V_t(s)} = \frac{k}{R_1R_2C_1C_2s^2 + (R_1+R_2)C_2s + 1}. \]
+
+\vspace{-1em}
+\subsection{Analyzing the circuit}
+\vspace{-1em}
+
+This filter has a zero in the left-half plane at $z = -\nicefrac{1}{RC_1}$,
+in contrast to the original Sallen-Key filter. The presence of the resistance
+$R$ is almost always parasitic and does not help with the desired signal
+generation.

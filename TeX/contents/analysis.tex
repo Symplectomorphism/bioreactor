@@ -282,6 +282,17 @@ The transfer function of the Sallen-Key filter is read as
     \label{eq:tf_sallenkey}
 \end{equation}
 %
+The gain and phase of this transfer function may be computed as follows
+%
+\begin{align}
+    \begin{split}
+    \abs{T(j\omega)} &= \frac{1}{\sqrt{1+R_1^2R_2^2C_1^2C_2^2\omega^4}}, \\
+    \angle{T(j\omega)} &=
+    -\arctan{\frac{(R_1+R_2)C_2\omega}{1-R_1R_2C_1C_2\omega^2}}.
+    \end{split}
+    \label{eq:sallenkey_gainphase}
+\end{align}
+
 We want to make this a Butterworth filter, making its frequency response as flat
 as possible in the passband. To that end, we identify the characteristic
 polynomial as
@@ -295,54 +306,89 @@ to the constraint on the circuit elements:
     \label{eq:cons1}
 \end{equation}
 %
-As in Section~\ref{ssec:second}, we want the natural frequency of the system
-well beyond our desired signal's frequency content so as not to lose signal
-strength, for example, $450\,\unit{\hertz} \leq f_n = \nicefrac{\omega_n}{2\pi} =
-\frac{1}{2\pi\sqrt{R_1R_2C_1C_2}}$, in other words,
+This Butterworth filter requirement simplifies the gain and
+phase~\eqref{eq:sallenkey_gainphase} of the transfer
+function~\eqref{eq:tf_sallenkey} as
+%
+\begin{align}
+    \begin{split}
+    \abs{T(j\omega)} &= \frac{1}{\sqrt{1+\nicefrac{1}{4}(R_1+R_2)^4C_2^4\omega^4}}, \\
+    \angle{T(j\omega)} &=
+    -\arctan{\frac{2(R_1+R_2)C_2\omega}{2-(R_1+R_2)^2C_2^2\omega^2}}.
+    \end{split}
+    \label{eq:gp_simplified}
+\end{align}
+%
+We ask that the magnitude of the output signal to be very close to the input
+signal, i.e., $\nicefrac{1}{\alpha_1}\abs{v_t(t)} \leq \abs{v_i(t)} \leq
+\abs{v_t(t)}$ at the frequency of operation $f_o$ (e.g. $90$\unit{\hertz}),
+where $\alpha_1 > 1$ and $\alpha_1 \approx 1$ (e.g. $\alpha_1 = 1 +
+\nicefrac{1}{1000}$). \[ \sqrt{1+\nicefrac{1}{4}(R_1+R_2)^4C_2^4(2\pi f_o)^4}
+\leq \alpha_1, \] or solving for the circuit elements
 %
 \begin{equation}
-    \sqrt{R_1R_2C_1C_2} \leq \frac{1}{2\pi f_n}.
+    (R_1+R_2)C_2 \leq \frac{\sqrt[4]{\alpha_1^2-1}}{\sqrt{2}\pi f_o}.
     \label{eq:cons2}
 \end{equation}
 %
-Asking for no less than $\alpha$-fold attenuation at the PWM carrier frequency
-$f_c = 36.6$\unit{\kilo\hertz} provides the further constraint $-20 \log \alpha
-\geq 20 \log{ \abs{T(j\omega_c)}}$. Performing a little bit of linear algebra
-involving the constraint~\eqref{eq:cons1} in conjuction with the transfer
-function~\eqref{eq:tf_sallenkey} shows that this is equivalent to
-\[ -20 \log \alpha \geq -10 \log{\left(1+R_1^2R_2^2C_1^2C_2^2\omega_c^4\right)},
-\] which translates to  
+Asking for no less than $\alpha_2$-fold attenuation ($\alpha_2 \gg 1$) at the
+PWM carrier frequency $f_c$ provides the constraint \[
+\sqrt{1+\nicefrac{1}{4}(R_1+R_2)^4C_2^4(2\pi f_c)^4} \geq \alpha_2, \] or,
+solving for the circuit elements,
 %
 \begin{equation}
-%    1 + 16\pi^4 R_1^2R_2^2C_1^2C_2^2 f_c^4 \geq 10^4.
-    \sqrt{R_1R_2C_1C_2} \geq \frac{\sqrt{\sqrt{\alpha^2-1}}}{2\pi f_c}
+    (R_1+R_2)C_2 \geq \frac{\sqrt[4]{\alpha_2^2-1}}{\sqrt{2}\pi f_c}.
     \label{eq:cons3}
 \end{equation}
 %
-Combining constraints~\eqref{eq:cons2} and~\eqref{eq:cons3} together, we obtain
-a design interval \[ \frac{\sqrt{\sqrt{\alpha^2 - 1}}}{2\pi f_c} \leq
-\sqrt{R_1R_2C_1C_2} \leq \frac{1}{2\pi f_n}. \] Combining
-this with the constraint~\eqref{eq:cons1} we obtain \[
-\frac{\sqrt{\sqrt{\alpha^2 - 1}}}{\sqrt{2}\pi f_c} \leq (R_1+R_2)C_2 \leq
-\frac{1}{\sqrt{2}\pi f_n}. \]
+Combining the gain requirements~\eqref{eq:cons2} and~\eqref{eq:cons3}, we obtain
+the design interval  
+\begin{equation}
+\frac{\sqrt[4]{\alpha_2^2 - 1}}{\sqrt{2}\pi f_c} \leq
+(R_1+R_2)C_2 \leq \frac{\sqrt[4]{\alpha_1^2-1}}{\sqrt{2}\pi f_o}.
+\label{eq:interval}
+\end{equation}
 
-To find specific values for the resistances and capacitances, we specify our
-desired values for the natural frequency, $f_n$, of the Sallen-Key filter, the
-decoupling capacitance, $C_2$, and the ratio between the resistances, $r =
-\nicefrac{R_1}{R_2}$. Once these are specified, the values of the remaining
+To find specific values for the resistances and capacitances, we specify the
+following quantities:
+%
+\begin{enumerate}
+    \item Tolerated attenuation at operation frequency: $\alpha_1$,
+    \item The value of the decoupling capacitance: $C_2$,
+    \item The ratio between the resistances: $r = \nicefrac{R_1}{R_2}$.
+\end{enumerate}
+%
+Once these are specified, the values of the remaining
 circuit components can be pinpointed. Indeed, from the
-constraint~\eqref{eq:cons1}, we obtain that \[C_1 = \frac{(1+r)^2}{2r}C_2. \] We
-want the sum of the resistances to be as large as possible since this filters at
-the lowest possible cut-off frequency while providing ample attenuation at the
-PWM carrier frequency. The last inequality then dictates \[ R_2 =
-\frac{1}{(1+r)\sqrt2\pi f_n C_2} \;\; \text{ and } \;\; R_1 = rR_2.\]
+constraint~\eqref{eq:cons1}, we obtain that \[C_1 = \frac{(1+r)^2}{2r}C_2. \] 
+%
+We make sure that the signal amplitude is attenuated no more than
+a factor of $\alpha_1$ at the operating frequency as well as provides ample
+attenuation at the PWM carrier frequency by satisfying the second inequality
+in~\eqref{eq:interval} as equality. This gives \[ R_2 =
+\frac{\sqrt[4]{\alpha_1^2-1}}{(1+r)\sqrt{2}\pi C_2} \;\; \text{ and } \;\; R_1 =
+rR_2.\]
+
+\begin{rem}
+    Choosing the values for the circuit elements in this manner also determines
+    the natural frequency and hence the phase shift. From the Sallen-Key filter
+    transfer function~\ref{eq:tf_sallenkey}, the natural frequency is computed
+    as \[f_n = \frac{1}{2\pi \sqrt{R_1R_2C_1C_2}} =
+    \frac{f_o}{\sqrt[4]{\alpha_1^2 -1}}. \]
+    %
+    Further, using equation~\eqref{eq:gp_simplified}, the phase shift is
+    given by \[ \angle T(j2\pi f) =
+    -\arctan{\frac{\sqrt{2}\nicefrac{f}{f_n}}{1-\nicefrac{f^2}{f_n^2}}}. \]
+\end{rem}
 
 We have used this procedure to compute the values for the circuit components,
-starting with $f_n = 450$\unit{\hertz}, $C_2 = 1$\unit{\nano\farad} and $r = 5$.
-The values for the remaining components are provided in
+selecting $\alpha_1 = 1+\nicefrac{1}{1000}$, $C_2 = 1$\unit{\nano\farad} and $r
+= 5$. The values for the remaining components are provided in
 Table~\ref{tab:theoretical_values}. This is a Butterworth filter that is
-maximally flat in its passband and provides $-76.4$\unit{\decibel} attenuation
-at the carrier frequency, 
+maximally flat in its passband with $f_n = 425.5$\unit{\hertz} and provides
+$-77.4$\unit{\decibel} attenuation at the carrier frequency. At the operation
+frequency $f_o = 90$\unit{\hertz}, this filter introduces a phase shift of
+$-17.39^\circ$.
 
 {\renewcommand{\arraystretch}{1.5}
 \begin{table}[t]
@@ -353,7 +399,7 @@ at the carrier frequency,
         $R_1$ & $R_2$ & $C_1$ & $C_2$ & $R_f$ & $R_{in}$ \\    
         \hline
         \midrule
-        $416.8$\unit{\kilo\ohm} & $83.4$\unit{\kilo\ohm} &
+        $440.8$\unit{\kilo\ohm} & $88.2$\unit{\kilo\ohm} &
         $3.6$\unit{\nano\farad} & $1$\unit{\nano\farad} &
         $2$\unit{\kilo\ohm} & $1$\unit{\kilo\ohm} \\
         \bottomrule

@@ -16,23 +16,26 @@ Example usage:
 
 class Bioreactor:
     R1, R2, C1 = 0.0, 0.0, 0.0
-    alpha2 = 100.0;
+    alpha2 = 100.0
     fo, fc = 90, 36600
     fn = 1.0
+    zeta = 0.0
 
     def __init__(self, C2: float=1e-9, alpha1: float=1.001, rho: float=1.0):
         self.alpha1 = alpha1
         self.C2 = C2
         self.Rratio = rho
+        self.coeff2 = self.R1*self.R2*self.C1*self.C2
+        self.coeff1 = (self.R1+self.R2)*self.C2
+        self.coeff0 = 1.0
         self.computeResistances()
         self.computeCapacitance()
+        self.computeCoeffs()
         self.computeNaturalFreq()
+        self.computeDampingRatio()
 
     def tf(self, s):
-        coeff2 = self.R1*self.R2*self.C1*self.C2
-        coeff1 = (self.R1+self.R2)*self.C2
-        coeff0 = 1.0
-        return 1/(coeff2*s*s + coeff1*s + coeff0)
+        return 1/(self.coeff2*s*s + self.coeff1*s + self.coeff0)
 
     def computeResistances(self):
         """
@@ -51,6 +54,11 @@ class Bioreactor:
     def computeCapacitance(self):
         self.C1 = self.C2*((self.R1+self.R2)**2)/2/self.R1/self.R2
 
+    def computeCoeffs(self):
+        self.coeff2 = self.R1*self.R2*self.C1*self.C2
+        self.coeff1 = (self.R1+self.R2)*self.C2
+        self.coeff0 = 1.0
+
     def gain(self, f: float):
         return np.abs(self.tf(2*np.pi*complex(0,f)))
 
@@ -67,10 +75,16 @@ class Bioreactor:
         _, r = self.computeInterval()
         self.fn = 1/np.sqrt(2)/np.pi/r
 
+    def computeDampingRatio(self):
+        self.zeta = self.coeff1/2/np.sqrt(self.coeff2)
+
     def computeInterval(self):
         left = np.power(self.alpha2**2-1, 1/4)/np.sqrt(2)/np.pi/self.fc
         right = np.power(self.alpha1**2-1, 1/4)/np.sqrt(2)/np.pi/self.fo
         return left, right
+
+    def computeCarrierAttenuation(self):
+        return self.gaindb(self.fc), self.gaindb(self.fc) <= 20*np.emath.logn(10, self.alpha2)
 
 
 # alpha1 = float(sys.argv[1])
